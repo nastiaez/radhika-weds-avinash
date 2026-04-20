@@ -2,87 +2,56 @@
 
 import Nav from "@/app/components/Nav";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 type Tier = "wedding" | "full" | null;
 
-const tierAEvents = [
+const day1Events = [
   {
-    day: "Day 2",
-    date: "Thursday, 2 July 2026",
-    time: "11:00 AM",
-    title: "Wedding Ceremony",
-    description: "The sacred wedding ceremony — joining Radhika and Avinash in matrimony surrounded by family and loved ones.",
-    venue: "Dwaraka Palace",
-    address: "1st Sea Ward Road, Thiruvanmiyur, Chennai 41",
-    dress: "Traditional Indian attire",
-    icon: "🪷",
-  },
-  {
-    day: "Day 2",
-    date: "Thursday, 2 July 2026",
-    time: "Post ceremony",
-    title: "Wedding Luncheon",
-    description: "Celebrate with a lavish luncheon following the ceremony. Food, family, and joy.",
-    venue: "Dwaraka Palace",
-    address: "1st Sea Ward Road, Thiruvanmiyur, Chennai 41",
-    dress: "Traditional Indian attire",
-    icon: "🍽️",
-  },
-];
-
-const tierBEvents = [
-  {
-    day: "Day 1",
     date: "Wednesday, 1 July 2026",
     time: "6:00 PM",
     title: "Engagement & Reception",
-    description: "An intimate evening soirée celebrating the engagement and reception with close family and friends.",
+    description: "An intimate evening celebrating the engagement and welcoming our families.",
     venue: "Dwaraka Palace",
-    address: "1st Sea Ward Road, Thiruvanmiyur, Chennai 41",
     dress: "Traditional Indian attire — festive",
-    icon: "✨",
   },
 ];
 
-function EventCard({
-  event,
-  tierLabel,
-}: {
-  event: (typeof tierAEvents)[0];
-  tierLabel?: string;
-}) {
+const day2Events = [
+  {
+    date: "Thursday, 2 July 2026",
+    time: "11:00 AM",
+    title: "Wedding Ceremony & Luncheon",
+    description: "The sacred ceremony followed by a celebratory luncheon for all guests.",
+    venue: "Dwaraka Palace",
+    dress: "Traditional Indian attire",
+  },
+];
+
+function EventCard({ event, tierLabel }: { event: typeof day1Events[0]; tierLabel?: string }) {
   return (
-    <div className="bg-cream border border-saffron/20 p-8 relative overflow-hidden">
-      <div className="absolute top-4 right-4 text-2xl">{event.icon}</div>
+    <div className="bg-cream border border-gold/30 p-6">
       {tierLabel && (
-        <span className="inline-block font-body text-xs text-saffron tracking-widest uppercase mb-4 border border-saffron/30 px-2 py-0.5">
+        <span className="inline-block font-body text-[10px] text-marigold tracking-widest uppercase mb-3 border border-marigold/30 px-2 py-0.5">
           {tierLabel}
         </span>
       )}
-      <p className="font-body text-xs text-warm-gray tracking-widest uppercase mb-1">{event.day}</p>
-      <h3 className="font-display text-3xl text-maroon font-light mb-2">{event.title}</h3>
-      <div className="w-8 h-px bg-saffron/40 mb-4" />
-      <p className="font-body text-sm text-warm-gray mb-1">{event.date}</p>
-      <p className="font-body text-sm text-saffron mb-4">{event.time}</p>
-      <p className="font-body text-sm text-warm-gray leading-relaxed mb-5">{event.description}</p>
-      <div className="border-t border-saffron/15 pt-4">
-        <p className="font-body text-xs text-maroon font-medium mb-1">{event.venue}</p>
-        <p className="font-body text-xs text-warm-gray mb-3">{event.address}</p>
-        <p className="font-body text-xs text-warm-gray">
-          <span className="text-saffron">Dress:</span> {event.dress}
+      <p className="font-body text-xs text-burgundy/60 mb-1">{event.date}</p>
+      <p className="font-body text-xs text-marigold mb-3">{event.time}</p>
+      <h3 className="font-display text-burgundy text-xl font-light mb-2">{event.title}</h3>
+      <p className="font-body text-sm text-burgundy/70 leading-relaxed mb-4">{event.description}</p>
+      <div className="border-t border-gold/15 pt-3">
+        <p className="font-body text-xs text-burgundy font-medium">{event.venue}</p>
+        <p className="font-body text-xs text-burgundy/50 mt-1">
+          <span className="text-marigold">Dress:</span> {event.dress}
         </p>
       </div>
-      <button className="mt-5 font-body text-xs tracking-widest uppercase border border-maroon/30 text-maroon/60 py-2 px-4 w-full cursor-not-allowed opacity-50">
-        + Add to Calendar
-      </button>
-      <p className="font-body text-xs text-center text-warm-gray mt-1 opacity-50">Coming soon</p>
     </div>
   );
 }
 
 export default function EventsPage() {
-  const [tier, setTier] = useState<Tier>(null);
+  const [tier, setTier] = useState<Tier>("wedding");
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
@@ -91,9 +60,6 @@ export default function EventsPage() {
     if (token === "full") {
       sessionStorage.setItem("tier", "full");
       setTier("full");
-    } else if (token === "wedding") {
-      sessionStorage.setItem("tier", "wedding");
-      setTier("wedding");
     } else {
       const stored = sessionStorage.getItem("tier") as Tier;
       setTier(stored ?? "wedding");
@@ -106,62 +72,62 @@ export default function EventsPage() {
   return (
     <>
       <Nav />
-      <main className="pt-16 bg-cream min-h-screen">
-        <section className="py-20 px-6 text-center bg-ivory">
-          <p className="font-body text-xs text-saffron tracking-widest uppercase mb-3">
-            Save the dates
-          </p>
-          <h1 className="font-display text-5xl md:text-7xl text-maroon font-light mb-4">Events</h1>
-          <div className="w-16 h-px bg-saffron/40 mx-auto mb-6" />
-          <p className="font-body text-warm-gray text-sm max-w-sm mx-auto leading-relaxed">
-            All events take place at Dwaraka Palace, Thiruvanmiyur, Chennai.
+      <main className="pt-14 bg-cream min-h-screen">
+        <section className="py-16 px-6 text-center bg-blush/20">
+          <p className="font-body text-xs text-marigold tracking-widest uppercase mb-3">Save the dates</p>
+          <h1 className="font-display text-burgundy text-5xl font-light mb-4">Events</h1>
+          <div className="w-12 h-px bg-gold/40 mx-auto" />
+          <p className="font-body text-burgundy/60 text-sm mt-4 max-w-sm mx-auto">
+            Dwaraka Palace, Thiruvanmiyur, Chennai
           </p>
           {checked && (
-            <p className="font-body text-xs text-warm-gray mt-4 opacity-60">
-              {isFullTier ? "You are viewing the full schedule (both days)" : "You are viewing the wedding day schedule"}
+            <p className="font-body text-xs text-burgundy/40 mt-3">
+              {isFullTier ? "You have access to both days" : "You have access to Wedding Day only"}
             </p>
           )}
         </section>
 
-        <section className="py-16 px-6">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-12 px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
             {isFullTier && (
-              <div className="mb-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="h-px flex-1 bg-saffron/20" />
-                  <h2 className="font-display text-2xl text-maroon font-light">Day 1 — Wednesday, 1 July</h2>
-                  <div className="h-px flex-1 bg-saffron/20" />
+              <div>
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="h-px flex-1 bg-gold/20" />
+                  <h2 className="font-display text-burgundy text-xl font-light">Day 1 — Wednesday, 1 July</h2>
+                  <div className="h-px flex-1 bg-gold/20" />
                 </div>
-                <div className="grid md:grid-cols-1 gap-6 max-w-xl">
-                  {tierBEvents.map((event) => (
-                    <EventCard key={event.title} event={event} tierLabel="Close Family" />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {day1Events.map((e) => (
+                    <EventCard key={e.title} event={e} tierLabel="Close Family" />
                   ))}
                 </div>
               </div>
             )}
 
             <div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="h-px flex-1 bg-saffron/20" />
-                <h2 className="font-display text-2xl text-maroon font-light">Day 2 — Thursday, 2 July</h2>
-                <div className="h-px flex-1 bg-saffron/20" />
+              <div className="flex items-center gap-4 mb-5">
+                <div className="h-px flex-1 bg-gold/20" />
+                <h2 className="font-display text-burgundy text-xl font-light">Day 2 — Thursday, 2 July</h2>
+                <div className="h-px flex-1 bg-gold/20" />
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                {tierAEvents.map((event) => (
-                  <EventCard key={event.title} event={event} />
+              <div className="grid sm:grid-cols-2 gap-4">
+                {day2Events.map((e) => (
+                  <EventCard key={e.title} event={e} />
                 ))}
               </div>
+            </div>
+
+            <div className="text-center pt-4">
+              <Link href="/venue" className="font-body text-xs text-teal hover:text-burgundy tracking-widest uppercase transition-colors">
+                Venue &amp; Directions →
+              </Link>
             </div>
           </div>
         </section>
 
-        <section className="py-14 px-6 bg-ivory text-center">
-          <Image src="/logo-transparent.png" alt="R&A" width={50} height={50} className="mx-auto mb-4 opacity-40" />
-          <p className="font-body text-warm-gray text-xs tracking-widest">
-            Come dressed for your favourite wedding.
-          </p>
-          <p className="font-display italic text-maroon text-lg mt-2">
-            Traditional Indian attire
+        <section className="py-10 px-6 bg-blush/20 text-center">
+          <p className="font-body text-burgundy/50 text-xs tracking-widest">
+            Come dressed for your favourite wedding. · Traditional Indian attire
           </p>
         </section>
       </main>

@@ -9,23 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#FAF7F2",
-        ivory: "#F0EAD6",
-        saffron: "#C8702A",
-        gold: "#B8960C",
-        maroon: "#6B1B1B",
-        rose: "#D4856A",
-        sage: "#4A6741",
-        "deep-maroon": "#4A0E0E",
-        "warm-gray": "#8C7B6B",
+        cream: "#F5EDD8",
+        blush: "#F0D5C0",
+        burgundy: "#7A2535",
+        teal: "#2A8B8C",
+        marigold: "#E8841A",
+        forest: "#4A7A3A",
+        gold: "#C9972A",
+        rose: "#C4547A",
+        "deep-burgundy": "#5A1A24",
       },
       fontFamily: {
         display: ["Cormorant Garamond", "Georgia", "serif"],
-        body: ["Jost", "system-ui", "sans-serif"],
-      },
-      animation: {
-        "fade-in": "fadeIn 0.8s ease-in-out",
-        "slide-up": "slideUp 0.6s ease-out",
+        body: ["Inter", "system-ui", "sans-serif"],
       },
       keyframes: {
         fadeIn: {
@@ -36,6 +32,10 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+      },
+      animation: {
+        "fade-in": "fadeIn 0.8s ease-in-out",
+        "slide-up": "slideUp 0.6s ease-out",
       },
     },
   },
