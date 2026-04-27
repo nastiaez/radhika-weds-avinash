@@ -104,7 +104,7 @@ export default function HomePage() {
                   src="/illustrations/ae3295efa5ecd78a667c2ff1c3db7a79e5d5dc02.jpg"
                   alt="Radhika and Avinash"
                   fill
-                  className="object-contain"
+                  className="object-contain object-bottom"
                   priority
                 />
               </div>
@@ -121,12 +121,21 @@ export default function HomePage() {
                 2 July 2026 · Dwaraka Palace, Chennai
               </p>
 
-              <button
-                onClick={() => document.getElementById("info")?.scrollIntoView({ behavior: "smooth" })}
-                className="btn-burgundy"
-              >
-                View Invitation
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/manjal-pathirikkai.pdf"
+                  download
+                  className="btn-burgundy"
+                >
+                  பத்திரிகை பதிவிறக்கம்
+                </a>
+                <button
+                  onClick={() => document.getElementById("info")?.scrollIntoView({ behavior: "smooth" })}
+                  className="btn-outline"
+                >
+                  More Info
+                </button>
+              </div>
             </div>
           </div>
         </Section>
