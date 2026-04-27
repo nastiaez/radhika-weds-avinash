@@ -70,21 +70,33 @@ export default function HomePage() {
 
       <main className="pt-14 bg-cream">
         <Section id="hero">
-          <div className="relative w-full overflow-hidden" style={{ minHeight: "60vh" }}>
+          <div className="relative w-full overflow-hidden" style={{ minHeight: "75vh" }}>
             <div className="absolute inset-0">
               <Image src="/illustrations/ae3295efa5ecd78a667c2ff1c3db7a79e5d5dc02.jpg" alt="" fill className="object-cover" priority />
-              <div className="absolute inset-0 bg-gradient-to-b from-cream/60 via-cream/40 to-cream" />
+              <div className="absolute inset-0 bg-gradient-to-b from-cream/40 via-cream/30 to-cream/80" />
             </div>
-            <div className="relative z-10 flex flex-col items-center justify-end min-h-[60vh] px-6 pb-16 text-center">
-              <div className="mb-6">
-                <Image src="/logo-transparent.png" alt="RA" width={80} height={80} />
-              </div>
-              <h1 className="font-display text-burgundy text-5xl md:text-7xl font-light leading-none mb-1">Radhika</h1>
-              <p className="font-display italic text-burgundy text-3xl md:text-4xl mb-6">&amp; Avinash</p>
-              <div className="max-w-lg">
-                <p className="font-body text-burgundy/70 text-sm leading-relaxed">
+            <div className="relative z-10 flex flex-col items-center justify-end min-h-[75vh] px-8 pb-20 text-center">
+              <div className="max-w-xl mb-8">
+                <h1 className="font-display text-burgundy text-5xl md:text-7xl font-light leading-none mb-1">Radhika</h1>
+                <h1 className="font-display text-burgundy text-5xl md:text-7xl font-light leading-none mb-6">&amp; Avinash</h1>
+                <div className="w-16 h-px bg-gold/40 mx-auto mb-6" />
+                <p className="font-body text-burgundy/75 text-base leading-relaxed">
                   With hearts full of joy, the Ranganathans and the Karandikas welcome you! Come. Celebrate with us. Laugh loudly. Bless deeply. Love freely. And enjoy wholeheartedly.
                 </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm">
+                <a
+                  href="#info"
+                  className="flex-1 bg-marigold text-cream font-body text-sm tracking-widest uppercase py-4 px-8 hover:bg-burgundy transition-colors text-center"
+                >
+                  Download Invitation
+                </a>
+                <a
+                  href="#info"
+                  className="flex-1 border border-burgundy text-burgundy font-body text-sm tracking-widest uppercase py-4 px-8 hover:bg-burgundy hover:text-cream transition-colors text-center"
+                >
+                  More Info
+                </a>
               </div>
             </div>
           </div>
