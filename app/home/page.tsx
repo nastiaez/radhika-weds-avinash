@@ -40,9 +40,9 @@ const tamilRituals = [
 ];
 
 const accommodation = [
-  { name: "The Leela Palace", type: "Luxury", distance: "~15 min", note: "5-star luxury by the Bay of Bengal." },
-  { name: "Taj Coromandel", type: "5-Star", distance: "~25 min", note: "An iconic hotel in the heart of Chennai." },
-  { name: "ITC Grand Chola", type: "5-Star", distance: "~20 min", note: "Spacious rooms and impeccable service." },
+  { name: "Vivanta Chennai", type: "5-Star", distance: "~10 min", note: "Contemporary luxury in the heart of the city." },
+  { name: "Radisson Blu GRT", type: "5-Star", distance: "~15 min", note: "Well-appointed rooms close to the beach." },
+  { name: "The Raintree Hotel", type: "4-Star", distance: "~12 min", note: "Charming boutique hotel near the seafront." },
 ];
 
 function Divider() {
@@ -134,7 +134,7 @@ export default function HomePage() {
         <Section id="info">
           <div className="bg-burgundy px-8 py-24">
             <div className="max-w-2xl mx-auto">
-              <p className="section-label text-center mb-2">SCHEDULE</p>
+              <p className="section-label text-center mb-2">DETAILS</p>
               <h2 className="font-display font-medium text-cream text-center mt-6 mb-12" style={{ fontSize: "clamp(36px, 5vw, 56px)" }}>
                 Info
               </h2>
