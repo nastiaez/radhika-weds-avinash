@@ -31,7 +31,7 @@ export default function SplashPage() {
         </p>
 
         <h1 className="font-display text-warm-black text-4xl md:text-5xl font-semibold mb-1">
-          The Ranganathans &amp; Karandikas
+          The Ranganathans &amp; Karandikars
         </h1>
         <p className="font-body text-warm-black/60 text-sm mb-12">welcome you</p>
 
