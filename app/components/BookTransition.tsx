@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
 interface BookTransitionProps {
   onComplete?: () => void;
@@ -42,16 +41,6 @@ export default function BookTransition({ onComplete }: BookTransitionProps) {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-px h-3/4 bg-[#6B4A35]" />
             </div>
-            <div className="absolute left-0 top-0 bottom-0 w-4 flex flex-col justify-center gap-3 pl-1">
-              <div className="w-px h-6 bg-[#6B4A35]" />
-              <div className="w-px h-6 bg-[#6B4A35]" />
-              <div className="w-px h-6 bg-[#6B4A35]" />
-            </div>
-            <div className="absolute right-0 top-0 bottom-0 w-4 flex flex-col justify-center gap-3 pr-1">
-              <div className="w-px h-6 bg-[#6B4A35]" />
-              <div className="w-px h-6 bg-[#6B4A35]" />
-              <div className="w-px h-6 bg-[#6B4A35]" />
-            </div>
           </motion.div>
 
           <motion.div
@@ -68,34 +57,7 @@ export default function BookTransition({ onComplete }: BookTransitionProps) {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-px h-3/4 bg-[#6B4A35]" />
             </div>
-            <div className="absolute left-0 top-0 bottom-0 w-4 flex flex-col justify-center gap-3 pl-1">
-              <div className="w-px h-6 bg-[#6B4A35]" />
-              <div className="w-px h-6 bg-[#6B4A35]" />
-              <div className="w-px h-6 bg-[#6B4A35]" />
-            </div>
-            <div className="absolute right-0 top-0 bottom-0 w-4 flex flex-col justify-center gap-3 pr-1">
-              <div className="w-px h-6 bg-[#6B4A35]" />
-              <div className="w-px h-6 bg-[#6B4A35]" />
-              <div className="w-px h-6 bg-[#6B4A35]" />
-            </div>
           </motion.div>
-
-          <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-            <motion.div
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 0 }}
-              transition={{ duration: 0.3, delay: 0.7 }}
-              className="flex flex-col items-center"
-            >
-              <Image
-                src="/logo-transparent.png"
-                alt="RA"
-                width={80}
-                height={80}
-                className="opacity-90"
-              />
-            </motion.div>
-          </div>
         </motion.div>
       )}
     </AnimatePresence>

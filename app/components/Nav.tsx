@@ -3,56 +3,36 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import LanguageDropdown from "./LanguageDropdown";
 
 const navLinks = [
-  { href: "/home", label: "Home" },
-  { href: "/story", label: "Our Story" },
-  { href: "/events", label: "Events" },
-  { href: "/venue", label: "Venue" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/gallery", label: "Gallery" },
+  { href: "#story", label: "Our Story" },
+  { href: "#info", label: "Info" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-gold/20">
-      <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-        <Link href="/home" className="flex items-center gap-2">
-          <Image
-            src="/logo-transparent.png"
-            alt="RA"
-            width={32}
-            height={32}
-          />
-          <span className="font-display text-burgundy text-base hidden sm:block">R&amp;A</span>
+      <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+        <Link href="/home" className="flex items-center">
+          <Image src="/logo-transparent.png" alt="R&A" width={36} height={36} />
         </Link>
 
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className={`font-body text-[10px] tracking-widest uppercase transition-colors duration-200 ${
-                  pathname === link.href
-                    ? "text-teal"
-                    : "text-burgundy/60 hover:text-burgundy"
-                }`}
-              >
+              <Link href={link.href} className="font-body text-[10px] tracking-widest uppercase text-burgundy/70 hover:text-burgundy transition-colors">
                 {link.label}
               </Link>
             </li>
           ))}
+          <li><LanguageDropdown /></li>
         </ul>
 
-        <button
-          className="md:hidden text-burgundy"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
+        <button className="md:hidden text-burgundy" onClick={() => setOpen(!open)} aria-label="Menu">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             {open ? (
               <path d="M6 18L18 6M6 6l12 12" />
@@ -74,13 +54,12 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className={`font-body text-xs tracking-widest uppercase ${
-                pathname === link.href ? "text-teal" : "text-burgundy/60"
-              }`}
+              className="font-body text-xs tracking-widest uppercase text-burgundy/70"
             >
               {link.label}
             </Link>
           ))}
+          <div className="pt-1 border-t border-gold/10"><LanguageDropdown /></div>
         </div>
       )}
     </nav>
