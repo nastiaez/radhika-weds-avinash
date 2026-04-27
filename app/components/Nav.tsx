@@ -15,7 +15,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/97 backdrop-blur-sm border-b border-gold/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-cream border-b-2 border-gold">
       <div className="max-w-4xl mx-auto px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image src="/logo-transparent.png" alt="R&A" width={44} height={44} />
@@ -26,7 +26,7 @@ export default function Nav() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-body text-sm tracking-widest uppercase text-burgundy/75 hover:text-burgundy transition-colors"
+                className="font-body text-sm tracking-widest uppercase text-warm-black hover:text-burgundy transition-colors"
               >
                 {link.label}
               </Link>
@@ -35,7 +35,7 @@ export default function Nav() {
           <li><LanguageDropdown /></li>
         </ul>
 
-        <button className="md:hidden text-burgundy" onClick={() => setOpen(!open)} aria-label="Menu">
+        <button className="md:hidden text-warm-black" onClick={() => setOpen(!open)} aria-label="Menu">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             {open ? (
               <path d="M6 18L18 6M6 6l12 12" />
@@ -51,18 +51,18 @@ export default function Nav() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-cream border-t border-gold/20 px-8 py-5 flex flex-col gap-4">
+        <div className="md:hidden bg-cream border-t border-gold px-8 py-5 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="font-body text-sm tracking-widest uppercase text-burgundy/75"
+              className="font-body text-sm tracking-widest uppercase text-warm-black"
             >
               {link.label}
             </Link>
           ))}
-          <div className="pt-2 border-t border-gold/10"><LanguageDropdown /></div>
+          <div className="pt-2 border-t border-gold/30"><LanguageDropdown /></div>
         </div>
       )}
     </nav>

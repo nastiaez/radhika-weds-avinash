@@ -38,24 +38,24 @@ export default function LanguageDropdown() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="font-body text-[10px] tracking-widest uppercase text-burgundy/70 hover:text-burgundy transition-colors flex items-center gap-1"
+        className="font-body text-xs tracking-widest uppercase text-warm-black hover:text-burgundy transition-colors flex items-center gap-1 border border-burgundy px-3 py-1"
       >
         {active?.native}
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={`transition-transform ${open ? "rotate-180" : ""}`}>
+        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={`transition-transform ${open ? "rotate-180" : ""}`}>
           <polyline points="6 9 12 15 18 9" />
         </svg>
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 bg-cream border border-gold/30 shadow-md min-w-[120px] z-50">
+        <div className="absolute right-0 top-full mt-2 bg-cream border border-burgundy min-w-[120px] z-50">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => select(lang.code)}
-              className={`w-full text-left px-4 py-2.5 font-body text-xs hover:bg-blush/20 transition-colors flex flex-col ${lang.code === current ? "text-teal" : "text-burgundy/70"}`}
+              className={`w-full text-left px-4 py-2.5 font-body text-xs hover:bg-burgundy hover:text-cream transition-colors flex flex-col ${lang.code === current ? "bg-burgundy text-cream" : "text-warm-black"}`}
             >
               <span className="font-display text-sm">{lang.native}</span>
-              <span className="text-[10px] opacity-50">{lang.label}</span>
+              <span className="text-[10px] opacity-60">{lang.label}</span>
             </button>
           ))}
         </div>

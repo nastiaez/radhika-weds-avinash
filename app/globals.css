@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #F5EDD8;
-  --foreground: #7A2535;
+  --cream: #F5EDD8;
+  --warm-black: #1A1009;
+  --burgundy: #7A2535;
+  --gold: #C9972A;
+  --forest: #4A7A3A;
 }
 
 * {
@@ -14,9 +17,9 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "Inter", system-ui, sans-serif;
+  color: var(--warm-black);
+  background: var(--cream);
+  font-family: "Jost", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -24,18 +27,71 @@ body {
   .font-display {
     font-family: "Cormorant Garamond", Georgia, serif;
   }
-  .divider-gold {
+
+  .divider-ornament {
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 2rem 0;
   }
-  .divider-gold::before,
-  .divider-gold::after {
+
+  .divider-ornament::before,
+  .divider-ornament::after {
     content: "";
     flex: 1;
-    height: 1px;
-    background: #C9972A;
-    opacity: 0.5;
+    height: 2px;
+    background: var(--gold);
+  }
+
+  .divider-ornament span {
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  .section-label {
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .btn-burgundy {
+    background: var(--burgundy);
+    color: var(--cream);
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .btn-burgundy:hover {
+    opacity: 0.85;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--burgundy);
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: 2px solid var(--burgundy);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover {
+    background: var(--burgundy);
+    color: var(--cream);
   }
 }
 
