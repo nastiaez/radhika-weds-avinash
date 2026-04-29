@@ -8,9 +8,10 @@ type GuestType = "1" | "2";
 interface Props {
   lang: Lang;
   type: GuestType;
+  onLangChange?: (lang: Lang) => void;
 }
 
-export default function WeddingPage({ lang, type }: Props) {
+export default function WeddingPage({ lang, type, onLangChange }: Props) {
   const heroRef = useRef<HTMLElement>(null);
   const heroNamesRef = useRef<HTMLHeadingElement>(null);
   const heroParaRef = useRef<HTMLParagraphElement>(null);
@@ -56,9 +57,20 @@ export default function WeddingPage({ lang, type }: Props) {
           <li className="nav-lang">
             <a href={langPaths[lang]}>{langLabels[lang]}</a>
             <div className="lang-dropdown">
-              <a href={langPaths.en}>English</a>
-              <a href={langPaths.ta}>தமிழ்</a>
-              <a href={langPaths.mr}>मराठी</a>
+              {(["en", "ta", "mr"] as Lang[]).map((l) => (
+                <a
+                  key={l}
+                  href={langPaths[l]}
+                  onClick={(e) => {
+                    if (onLangChange) {
+                      e.preventDefault();
+                      onLangChange(l);
+                    }
+                  }}
+                >
+                  {langLabels[l]}
+                </a>
+              ))}
             </div>
           </li>
         </ul>
