@@ -21,7 +21,7 @@ export default function WeddingPage({ lang, type }: Props) {
 
   const isFamily = type === "2";
   const langPaths = {
-    en: isFamily ? "/family/home" : "/home",
+    en: isFamily ? "/family/home" : "/",
     ta: isFamily ? "/family/ta" : "/ta",
     mr: isFamily ? "/family/mr" : "/mr",
   };

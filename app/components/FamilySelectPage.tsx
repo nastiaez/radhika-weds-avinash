@@ -9,9 +9,10 @@ type GuestType = "1" | "2";
 interface Props {
   lang: Lang;
   type: GuestType;
+  onReady?: () => void;
 }
 
-export default function FamilySelectPage({ lang, type }: Props) {
+export default function FamilySelectPage({ lang, type, onReady }: Props) {
   const router = useRouter();
   const [screen, setScreen] = useState<"select" | "card">("select");
   const [selectedFamily, setSelectedFamily] = useState<"ranganathan" | "karandikar" | null>(null);
@@ -21,7 +22,7 @@ export default function FamilySelectPage({ lang, type }: Props) {
   const isMobile = () =>
     typeof window !== "undefined" && window.innerWidth < 768;
 
-  const homeUrl = type === "2" ? "/family/home" : "/home";
+  const homeUrl = type === "2" ? "/family/home" : `/${lang}/home`;
 
   function showCard(family: "ranganathan" | "karandikar") {
     setSelectedFamily(family);
@@ -40,7 +41,13 @@ export default function FamilySelectPage({ lang, type }: Props) {
   function handleCTA(e: React.MouseEvent) {
     e.preventDefault();
     setTransitioning(true);
-    setTimeout(() => router.push(homeUrl), 400);
+    setTimeout(() => {
+      if (onReady) {
+        onReady();
+      } else {
+        router.push(homeUrl);
+      }
+    }, 400);
   }
 
   return (
