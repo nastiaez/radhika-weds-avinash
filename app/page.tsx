@@ -1,5 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import FamilySelectPage from "@/app/components/FamilySelectPage";
+import WeddingPage from "@/app/components/WeddingPage";
 
 export default function Page() {
-  return <FamilySelectPage lang="en" type="1" />;
+  const [ready, setReady] = useState(false);
+  if (ready) return <WeddingPage lang="en" type="1" />;
+  return <FamilySelectPage lang="en" type="1" onReady={() => setReady(true)} />;
 }
