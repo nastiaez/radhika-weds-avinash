@@ -44,7 +44,7 @@ export default function FamilySelectPage({ lang, type }: Props) {
   }
 
   return (
-    <div className="family-select-root">
+    <div className={`family-select-root lang-${lang}`}>
       {screen === "select" && (
         <section id="screen-select">
           <p className="eyebrow">You are invited to</p>
@@ -94,7 +94,6 @@ export default function FamilySelectPage({ lang, type }: Props) {
       {screen === "card" && selectedFamily && (
         <section id="screen-card" className="visible" aria-live="polite">
           <div className="invitation-card">
-            <div className="card-inner-border" />
             <img className="card-bells" src="/media/hanging bells.png" alt="" />
             <div className="card-body">
               {selectedFamily === "ranganathan" ? (

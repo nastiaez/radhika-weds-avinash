@@ -16,8 +16,8 @@ const config: Config = {
         forest: "#4A7A3A",
       },
       fontFamily: {
-        display: ["Cormorant Garamond", "Georgia", "serif"],
-        body: ["Jost", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
       },
     },
   },

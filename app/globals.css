@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+/* Fonts loaded via next/font/google in layout.tsx — CSS variables injected on <html> */
 
 @tailwind base;
 @tailwind components;
@@ -19,13 +19,13 @@
 body {
   color: var(--warm-black);
   background: var(--cream);
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 @layer utilities {
   .font-display {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: var(--font-display), Georgia, serif;
   }
 
   .divider-ornament {
@@ -109,7 +109,7 @@ html {
   justify-content: center;
   background: #F3EBCF;
   color: #1C1712;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
 
 .family-select-root #screen-select {
@@ -120,7 +120,7 @@ html {
 }
 
 .family-select-root .eyebrow {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 300;
   font-size: 0.75rem;
   letter-spacing: 0.25em;
@@ -131,7 +131,7 @@ html {
 }
 
 .family-select-root .names-heading {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-style: italic;
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 400;
@@ -141,13 +141,13 @@ html {
 }
 
 .family-select-root .prompt {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 300;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.6;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 
 .family-select-root .envelopes {
@@ -208,7 +208,7 @@ html {
 }
 
 .family-select-root .family-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-style: italic;
   font-size: 1.6rem;
   font-weight: 400;
@@ -217,13 +217,13 @@ html {
 }
 
 .family-select-root .family-role {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 300;
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.6;
-  margin-top: 0.25rem;
+  margin-top: 0rem;
 }
 
 .family-select-root #screen-card {
@@ -262,7 +262,7 @@ html {
 }
 
 .family-select-root .card-parents {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-weight: 400;
   font-size: 2rem;
   line-height: 1.4;
@@ -270,7 +270,7 @@ html {
 }
 
 .family-select-root .card-label {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 300;
   font-size: 0.62rem;
   letter-spacing: 0.2em;
@@ -298,7 +298,7 @@ html {
 }
 
 .family-select-root .card-main-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-style: italic;
   font-size: 1.4rem;
   font-weight: 400;
@@ -307,7 +307,7 @@ html {
 }
 
 .family-select-root .card-with {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 300;
   font-size: 0.62rem;
   letter-spacing: 0.2em;
@@ -317,7 +317,7 @@ html {
 }
 
 .family-select-root .card-partner-sub {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 300;
   font-size: 0.6rem;
   letter-spacing: 0.12em;
@@ -331,7 +331,7 @@ html {
   display: inline-block;
   background: #7B2035;
   color: #F2EDD9;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 300;
   font-size: 0.7rem;
   letter-spacing: 0.22em;
@@ -382,7 +382,7 @@ html {
 .wedding-page {
   background-color: #F1E9D3;
   color: #1A1009;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
@@ -423,7 +423,7 @@ html {
 }
 
 .wedding-page .nav-links a {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.12em;
@@ -479,7 +479,7 @@ html {
 .wedding-page #hero.revealed { opacity: 1; }
 
 .wedding-page .hero-names {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: clamp(64px, 10vw, 110px);
   font-weight: 400;
   line-height: 1.05;
@@ -507,7 +507,7 @@ html {
   color: #1A1009;
   line-height: 1.9;
   margin: 0 auto 2.5rem;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -528,7 +528,7 @@ html {
 .wedding-page .btn {
   display: inline-block;
   padding: 1rem 2.2rem;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.16em;
@@ -559,7 +559,7 @@ html {
 .wedding-page .section-inner { max-width: 900px; margin: 0 auto; }
 
 .wedding-page .section-label {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 11px;
   font-weight: 300;
   letter-spacing: 0.25em;
@@ -569,7 +569,7 @@ html {
 }
 
 .wedding-page .section-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: clamp(36px, 5vw, 52px);
   font-weight: 300;
   color: #7A2535;
@@ -595,7 +595,7 @@ html {
 }
 
 .wedding-page .info-card-icon {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 28px;
   color: #C9972A;
   margin-bottom: 0.75rem;
@@ -603,7 +603,7 @@ html {
 }
 
 .wedding-page .info-card h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 22px;
   font-weight: 400;
   color: #F1E9D3;
@@ -622,7 +622,7 @@ html {
 .wedding-page .info-block { max-width: 640px; }
 
 .wedding-page .info-block-label {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 11px;
   font-weight: 300;
   letter-spacing: 0.22em;
@@ -632,7 +632,7 @@ html {
 }
 
 .wedding-page .info-block h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 26px;
   font-weight: 400;
   color: #F1E9D3;
@@ -675,7 +675,7 @@ html {
 }
 
 .wedding-page .schedule-time {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -685,7 +685,7 @@ html {
 }
 
 .wedding-page .schedule-event h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 28px;
   font-weight: 400;
   color: #1A1009;
@@ -695,7 +695,7 @@ html {
 .wedding-page .schedule-event p { font-size: 15px; font-weight: 300; color: rgba(26,16,9,0.6); max-width: 520px; line-height: 1.75; }
 
 .wedding-page .schedule-venue-note {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 13px;
   font-weight: 300;
   color: #1A1009;
@@ -704,7 +704,7 @@ html {
 }
 
 .wedding-page .schedule-day-label {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.18em;
@@ -715,7 +715,7 @@ html {
 }
 
 .wedding-page .schedule-day-note {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 12px;
   font-weight: 300;
   font-style: italic;
@@ -725,7 +725,7 @@ html {
 }
 
 .wedding-page .schedule-dress {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #1A1009;
@@ -755,7 +755,7 @@ html {
 }
 
 .wedding-page .venue-address h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 30px;
   font-weight: 400;
   color: #F1E9D3;
@@ -787,7 +787,7 @@ html {
 .wedding-page .map-embed iframe { width: 100%; height: 100%; border: none; }
 
 .wedding-page .accommodation h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 32px;
   font-weight: 300;
   color: #F1E9D3;
@@ -817,11 +817,11 @@ html {
   font-style: italic;
   font-size: 13px;
   color: rgba(245,237,216,0.4);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
 }
 
 .wedding-page .hotel-card h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 20px;
   font-weight: 400;
   color: #F1E9D3;
@@ -846,7 +846,7 @@ html {
 .wedding-page .story-chapter { margin-bottom: 3.5rem; }
 
 .wedding-page .story-chapter h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 32px;
   font-weight: 400;
   font-style: italic;
@@ -857,7 +857,7 @@ html {
 .wedding-page .story-chapter p { font-size: 16px; font-weight: 300; line-height: 1.9; color: #1A1009; }
 
 .wedding-page .story-tagline {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
@@ -869,7 +869,7 @@ html {
 }
 
 .wedding-page .story-chapter-label {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -879,7 +879,7 @@ html {
 }
 
 .wedding-page .story-location {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 15px;
   font-style: italic;
   color: #1A1009;
@@ -888,7 +888,7 @@ html {
 }
 
 .wedding-page .story-quote {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 22px;
   font-style: italic;
   font-weight: 500;
@@ -900,7 +900,7 @@ html {
 
 .wedding-page .story-closing {
   margin-top: 1rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 18px;
   color: #7A2535;
 }
@@ -917,7 +917,7 @@ html {
 .wedding-page .faq-list { display: flex; flex-direction: column; max-width: 680px; }
 
 .wedding-page .faq-group-label {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.18em;
@@ -931,7 +931,7 @@ html {
 .wedding-page .faq-list .faq-item { margin-bottom: 1.25rem; }
 
 .wedding-page .faq-item h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 22px;
   font-weight: 400;
   color: #F1E9D3;
@@ -952,7 +952,7 @@ html {
 .wedding-page footer strong {
   color: #C9972A;
   font-weight: 400;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display), serif;
   font-size: 17px;
 }
 
@@ -963,4 +963,96 @@ html {
   .wedding-page .venue-photos { grid-template-columns: 1fr; }
   .wedding-page .hotel-grid { grid-template-columns: 1fr; }
   .wedding-page section { padding: 4rem 1.25rem; }
+}
+
+/* ═══════════════════════════════════
+   LANGUAGE FONT OVERRIDES
+═══════════════════════════════════ */
+
+/* ── Tamil: Noto Serif Tamil for all display elements ── */
+.lang-ta .wedding-page .hero-names,
+.lang-ta .wedding-page .section-title,
+.lang-ta .wedding-page .info-card-icon,
+.lang-ta .wedding-page .info-card h3,
+.lang-ta .wedding-page .schedule-event h3,
+.lang-ta .wedding-page .venue-address h3,
+.lang-ta .wedding-page .accommodation h3,
+.lang-ta .wedding-page .hotel-card h4,
+.lang-ta .wedding-page .hotel-img,
+.lang-ta .wedding-page .story-chapter h3,
+.lang-ta .wedding-page .story-tagline,
+.lang-ta .wedding-page .story-quote,
+.lang-ta .wedding-page .story-closing,
+.lang-ta .wedding-page .faq-item h3,
+.lang-ta .wedding-page footer strong,
+.lang-ta .family-select-root .names-heading,
+.lang-ta .family-select-root .family-name,
+.lang-ta .family-select-root .card-parents,
+.lang-ta .family-select-root .card-main-name {
+  font-family: var(--font-display-ta), Georgia, serif;
+}
+/* Body (Catamaran) already covers Tamil script — no override needed */
+
+/* ── Marathi: Hind for body, Tiro Devanagari for display ── */
+
+/* Body override — Hind everywhere explicit body font is set */
+.lang-mr .wedding-page,
+.lang-mr .family-select-root {
+  font-family: var(--font-body-mr), system-ui, sans-serif;
+}
+
+.lang-mr .wedding-page .nav-links a,
+.lang-mr .wedding-page .section-label,
+.lang-mr .wedding-page .hero-para,
+.lang-mr .wedding-page .btn,
+.lang-mr .wedding-page .info-card p,
+.lang-mr .wedding-page .info-block-label,
+.lang-mr .wedding-page .info-block p,
+.lang-mr .wedding-page .schedule-time,
+.lang-mr .wedding-page .schedule-venue-note,
+.lang-mr .wedding-page .schedule-day-label,
+.lang-mr .wedding-page .schedule-day-note,
+.lang-mr .wedding-page .schedule-dress,
+.lang-mr .wedding-page .schedule-event p,
+.lang-mr .wedding-page .venue-address p,
+.lang-mr .wedding-page .venue-address a,
+.lang-mr .wedding-page .hotel-card p,
+.lang-mr .wedding-page .hotel-card a,
+.lang-mr .wedding-page .story-chapter-label,
+.lang-mr .wedding-page .story-location,
+.lang-mr .wedding-page .story-chapter p,
+.lang-mr .wedding-page .faq-group-label,
+.lang-mr .wedding-page .faq-item p,
+.lang-mr .wedding-page footer,
+.lang-mr .family-select-root .eyebrow,
+.lang-mr .family-select-root .prompt,
+.lang-mr .family-select-root .family-role,
+.lang-mr .family-select-root .card-label,
+.lang-mr .family-select-root .card-with,
+.lang-mr .family-select-root .card-partner-sub,
+.lang-mr .family-select-root .btn-cta {
+  font-family: var(--font-body-mr), system-ui, sans-serif;
+}
+
+/* Display override — Tiro Devanagari */
+.lang-mr .wedding-page .hero-names,
+.lang-mr .wedding-page .section-title,
+.lang-mr .wedding-page .info-card-icon,
+.lang-mr .wedding-page .info-card h3,
+.lang-mr .wedding-page .schedule-event h3,
+.lang-mr .wedding-page .venue-address h3,
+.lang-mr .wedding-page .accommodation h3,
+.lang-mr .wedding-page .hotel-card h4,
+.lang-mr .wedding-page .hotel-img,
+.lang-mr .wedding-page .story-chapter h3,
+.lang-mr .wedding-page .story-tagline,
+.lang-mr .wedding-page .story-quote,
+.lang-mr .wedding-page .story-closing,
+.lang-mr .wedding-page .faq-item h3,
+.lang-mr .wedding-page footer strong,
+.lang-mr .family-select-root .names-heading,
+.lang-mr .family-select-root .family-name,
+.lang-mr .family-select-root .card-parents,
+.lang-mr .family-select-root .card-main-name {
+  font-family: var(--font-display-mr), Georgia, serif;
 }

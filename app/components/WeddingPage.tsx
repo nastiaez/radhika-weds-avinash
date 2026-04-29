@@ -10,7 +10,7 @@ interface Props {
   type: GuestType;
 }
 
-export default function WeddingPage({ lang: _lang, type }: Props) {
+export default function WeddingPage({ lang, type }: Props) {
   const heroRef = useRef<HTMLElement>(null);
   const heroNamesRef = useRef<HTMLHeadingElement>(null);
   const heroParaRef = useRef<HTMLParagraphElement>(null);
@@ -18,6 +18,14 @@ export default function WeddingPage({ lang: _lang, type }: Props) {
   const navRef = useRef<HTMLElement>(null);
 
   const showDay1 = type === "2";
+
+  const isFamily = type === "2";
+  const langPaths = {
+    en: isFamily ? "/family/home" : "/home",
+    ta: isFamily ? "/family/ta" : "/ta",
+    mr: isFamily ? "/family/mr" : "/mr",
+  };
+  const langLabels = { en: "English", ta: "தமிழ்", mr: "मराठी" };
 
   useEffect(() => {
     const reveal = (el: HTMLElement | null, delay: number) => {
@@ -35,7 +43,7 @@ export default function WeddingPage({ lang: _lang, type }: Props) {
   }, []);
 
   return (
-    <div className="wedding-page">
+    <div className={`wedding-page lang-${lang}`}>
       {/* NAV */}
       <nav ref={navRef} style={{ opacity: 0, transition: "opacity 0.4s ease" }}>
         <a href="#hero" className="nav-logo">
@@ -46,11 +54,11 @@ export default function WeddingPage({ lang: _lang, type }: Props) {
           <li><a href="#info">Info</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li className="nav-lang">
-            <a href="#">English</a>
+            <a href={langPaths[lang]}>{langLabels[lang]}</a>
             <div className="lang-dropdown">
-              <a href="#">English</a>
-              <a href="#">தமிழ்</a>
-              <a href="#">मराठी</a>
+              <a href={langPaths.en}>English</a>
+              <a href={langPaths.ta}>தமிழ்</a>
+              <a href={langPaths.mr}>मराठी</a>
             </div>
           </li>
         </ul>
