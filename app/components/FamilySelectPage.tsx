@@ -16,7 +16,6 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
   const router = useRouter();
   const [screen, setScreen] = useState<"select" | "card">("select");
   const [selectedFamily, setSelectedFamily] = useState<"ranganathan" | "karandikar" | null>(null);
-  const [tapped, setTapped] = useState<string | null>(null);
   const [clicking, setClicking] = useState<"ranganathan" | "karandikar" | null>(null);
   const [transitioning, setTransitioning] = useState(false);
   const [loaded, setLoaded] = useState(false);
