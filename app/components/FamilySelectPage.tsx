@@ -17,6 +17,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
   const [screen, setScreen] = useState<"select" | "card">("select");
   const [selectedFamily, setSelectedFamily] = useState<"ranganathan" | "karandikar" | null>(null);
   const [tapped, setTapped] = useState<string | null>(null);
+  const [clicking, setClicking] = useState<"ranganathan" | "karandikar" | null>(null);
   const [transitioning, setTransitioning] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
@@ -36,12 +37,12 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
   }
 
   function handleEnvelopeClick(family: "ranganathan" | "karandikar") {
-    if (isMobile()) {
-      setTapped(family);
-      setTimeout(() => showCard(family), 600);
-    } else {
+    setClicking(family);
+    const delay = isMobile() ? 150 : 200;
+    setTimeout(() => {
+      setClicking(null);
       showCard(family);
-    }
+    }, delay);
   }
 
   function handleCTA(e: React.MouseEvent) {
@@ -70,7 +71,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
             {(["ranganathan", "karandikar"] as const).map((family) => (
               <div
                 key={family}
-                className={`envelope-wrapper${tapped === family ? " tapped" : ""}`}
+                className={`envelope-wrapper${clicking === family ? " clicking" : ""}`}
                 role="button"
                 tabIndex={0}
                 aria-label={

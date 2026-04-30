@@ -283,6 +283,25 @@ html {
   opacity: 1;
 }
 
+/* Click exit animation */
+.family-select-root .envelope-wrapper.clicking {
+  opacity: 0.3;
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 16px rgba(184,144,42,0.35));
+  transition: opacity 200ms ease;
+  pointer-events: none;
+}
+
+.family-select-root .envelope-wrapper.clicking .env-letter-rect {
+  opacity: 1;
+  transform: translateY(-90px);
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.family-select-root .envelope-wrapper.clicking .env-flap {
+  opacity: 1;
+}
+
 .family-select-root .envelope-label {
   position: absolute;
   top: 90%;
