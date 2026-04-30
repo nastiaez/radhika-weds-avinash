@@ -264,7 +264,7 @@ html {
 .family-select-root .card-parents {
   font-family: var(--font-display), serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.4;
   margin-bottom: 1.2rem;
 }
