@@ -1,5 +1,5 @@
 import WeddingPage from "@/app/components/WeddingPage";
 
 export default function Page() {
-  return <WeddingPage lang="mr" type="2" />;
+  return <WeddingPage lang="en" type="1" />;
 }

@@ -22,7 +22,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
   const isMobile = () =>
     typeof window !== "undefined" && window.innerWidth < 768;
 
-  const homeUrl = type === "2" ? "/family/home" : `/${lang}/home`;
+  const homeUrl = type === "2" ? "/family/en" : "/en";
 
   function showCard(family: "ranganathan" | "karandikar") {
     setSelectedFamily(family);
