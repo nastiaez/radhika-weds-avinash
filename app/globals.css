@@ -160,23 +160,19 @@ html {
 }
 
 .family-select-root.loaded .names-heading {
-  animation: fsEntryUp 500ms ease forwards;
-  animation-delay: 300ms;
+  animation: fsEntryUp 500ms ease 300ms forwards;
 }
 
 .family-select-root.loaded .shimmer-rule {
-  animation: fsEntryRule 500ms ease forwards;
-  animation-delay: 600ms;
+  animation: fsEntryRule 500ms ease 600ms forwards;
 }
 
 .family-select-root.loaded .prompt {
-  animation: fsEntryFade 400ms ease forwards;
-  animation-delay: 900ms;
+  animation: fsEntryFade 400ms ease 900ms forwards;
 }
 
 .family-select-root.loaded .envelopes {
-  animation: fsEntryEnvelopes 500ms ease-out forwards;
-  animation-delay: 1000ms;
+  animation: fsEntryEnvelopes 500ms ease-out 1000ms forwards;
 }
 
 .family-select-root #screen-select {
