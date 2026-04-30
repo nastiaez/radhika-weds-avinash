@@ -232,6 +232,7 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
           </div>
           <div className="accommodation">
             <h3>{t.venue.stayTitle}</h3>
+            <p className="stay-intro">{t.venue.stayIntro}</p>
             <div className="hotel-grid">
               <div className="hotel-card">
                 <div className="hotel-img">Hotel photo</div>

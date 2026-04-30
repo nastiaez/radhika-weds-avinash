@@ -62,6 +62,7 @@ export type Translations = {
     addressLine4: string;
     mapsLink: string;
     stayTitle: string;
+    stayIntro: string;
     hotel1Name: string;
     hotel1Desc: string;
     hotel2Name: string;
