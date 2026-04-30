@@ -28,7 +28,7 @@ export const en: Translations = {
     phonesLabel: "Phones & Cameras",
     phonesTitle: "A Presence-First Celebration",
     phonesBody:
-      "To ensure an intimate atmosphere, we will be masking guest phone cameras at the door. While you'll have full access to your phone for calls and texts, we kindly ask that you join us in a camera-free environment. Our photographers will be delighted to share all the special moments with you later!",
+      "To ensure an intimate atmosphere, we will be masking guest phone cameras at the door. While you'll have full access to your phone for calls and texts, we kindly ask that you join us in a camera-free environment.",
     photoLabel: "Official Photography",
     photoTitle: "Every Moment Captured",
     photoBody:
