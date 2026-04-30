@@ -37,7 +37,7 @@ export const en: Translations = {
   schedule: {
     sectionTitle: "Schedule & Rituals",
     venueNote: "All events take place at Dwaraka Palace, Thiruvanmiyur, Chennai.",
-    day1Label: "Day 1 — Wednesday, 1 July 2026",
+    day1Label: "Wednesday, 1 July 2026",
     day1Note: "Close family and friends only",
     engagementTime: "5:00 pm",
     engagementTitle: "Engagement Ceremony",
@@ -49,7 +49,7 @@ export const en: Translations = {
     receptionDesc:
       "Dwaraka Palace. An evening reception with dinner and music. Dine in the open lawn with beach access.",
     receptionDress: "Dress: Festive Indian attire",
-    day2Label: "Day 2 — Thursday, 2 July 2026",
+    day2Label: "Thursday, 2 July 2026",
     weddingTime: "9:00 am",
     weddingTitle: "Wedding Ceremony",
     weddingDesc:

@@ -39,7 +39,7 @@ export const mr: Translations = {
   schedule: {
     sectionTitle: "वेळापत्रक आणि विधी",
     venueNote: "सर्व कार्यक्रम द्वारका पॅलेस, तिरुवान्मियूर, चेन्नई येथे होतील.",
-    day1Label: "दिवस १ — बुधवार, १ जुलै २०२६",
+    day1Label: "बुधवार, १ जुलै २०२६",
     day1Note: "केवळ जवळचे कुटुंब आणि मित्र",
     engagementTime: "संध्याकाळी ५:००",
     engagementTitle: "साखरपुडा समारंभ",
@@ -51,7 +51,7 @@ export const mr: Translations = {
     receptionDesc:
       "द्वारका पॅलेस. रात्रीच्या जेवणासह आणि संगीतासह संध्याकाळचा स्वागत समारंभ. समुद्र किनाऱ्याच्या प्रवेशासह खुल्या मैदानात जेवण.",
     receptionDress: "पेहराव: उत्सवी भारतीय वेशभूषा",
-    day2Label: "दिवस २ — गुरुवार, २ जुलै २०२६",
+    day2Label: "गुरुवार, २ जुलै २०२६",
     weddingTime: "सकाळी ९:००",
     weddingTitle: "लग्न समारंभ",
     weddingDesc:
