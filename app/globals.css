@@ -227,6 +227,7 @@ html {
   align-items: center;
   width: 260px;
   position: relative;
+  transition: transform 300ms ease, filter 300ms ease;
 }
 
 .family-select-root .envelope-area {
@@ -267,10 +268,6 @@ html {
 .family-select-root .env-front      { z-index: 4; }
 
 /* Hover: wrapper scale + gold glow */
-.family-select-root .envelope-wrapper {
-  transition: transform 300ms ease, filter 300ms ease;
-}
-
 .family-select-root .envelope-wrapper:hover {
   transform: scale(1.04);
   filter: drop-shadow(0 4px 16px rgba(184,144,42,0.35));
