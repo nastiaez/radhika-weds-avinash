@@ -99,7 +99,7 @@ export const en: Translations = {
     ch3Location: "Salzburg, Austria",
     ch3p1:
       "A year after they met, Radhika and her father travelled to Germany to visit Avinash. As her trip drew to a close, Avinash took her to Salzburg — cobblestone streets, alpine air, and the still blue of a lake reflecting the sky.",
-    ch3Quote: ""Will you marry me?"",
+    ch3Quote: "“Will you marry me?”",
     ch3p2:
       "Standing by the water, in one of Europe's most quietly romantic cities, he asked. She said yes. The lake didn't move. Everything else did.",
     ch4Label: "Chapter 04 · Now",
