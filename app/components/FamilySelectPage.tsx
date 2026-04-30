@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 type Lang = "en" | "ta" | "mr";
@@ -18,6 +18,12 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
   const [selectedFamily, setSelectedFamily] = useState<"ranganathan" | "karandikar" | null>(null);
   const [tapped, setTapped] = useState<string | null>(null);
   const [transitioning, setTransitioning] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setLoaded(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   const isMobile = () =>
     typeof window !== "undefined" && window.innerWidth < 768;
@@ -51,12 +57,13 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
   }
 
   return (
-    <div className={`family-select-root lang-${lang}`}>
+    <div className={`family-select-root lang-${lang}${loaded ? " loaded" : ""}`}>
       {screen === "select" && (
         <section id="screen-select">
           <p className="eyebrow">You are invited to</p>
           <p className="eyebrow">The Wedding of</p>
           <h1 className="names-heading">Radhika &amp; Avinash</h1>
+          <div className="shimmer-rule" aria-hidden="true" />
           <p className="prompt">Please select whose guest are you:</p>
 
           <div className="envelopes">
