@@ -53,7 +53,7 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
     <div className={`wedding-page lang-${lang}`}>
       {/* NAV */}
       <nav ref={navRef} style={{ opacity: 0, transition: "opacity 0.4s ease" }}>
-        <a href="#hero" className="nav-logo">
+        <a href={isFamily ? "/family" : "/"} className="nav-logo">
           <img src="/media/logo_transparent.png" alt="R & A" />
         </a>
         <ul className="nav-links">
