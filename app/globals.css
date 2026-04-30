@@ -237,7 +237,8 @@ html {
 }
 
 .family-select-root .env-base,
-.family-select-root .env-letter,
+.family-select-root .env-letter-rect,
+.family-select-root .env-flap,
 .family-select-root .env-front {
   position: absolute;
   width: 100%;
@@ -246,16 +247,44 @@ html {
   left: 0;
 }
 
-.family-select-root .env-base  { z-index: 1; }
-.family-select-root .env-letter {
+/* 4-layer envelope stack */
+.family-select-root .env-base       { z-index: 1; }
+
+.family-select-root .env-letter-rect {
   z-index: 2;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transform: translateY(50px);
+  transition: opacity 350ms cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 350ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.family-select-root .env-front { z-index: 3; }
 
-.family-select-root .envelope-wrapper:hover .env-letter,
-.family-select-root .envelope-wrapper.tapped .env-letter { opacity: 1; }
+.family-select-root .env-flap {
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.family-select-root .env-front      { z-index: 4; }
+
+/* Hover: wrapper scale + gold glow */
+.family-select-root .envelope-wrapper {
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.family-select-root .envelope-wrapper:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 16px rgba(184,144,42,0.35));
+}
+
+/* Hover: letter slides up, flap appears */
+.family-select-root .envelope-wrapper:hover .env-letter-rect {
+  opacity: 1;
+  transform: translateY(-55px);
+}
+
+.family-select-root .envelope-wrapper:hover .env-flap {
+  opacity: 1;
+}
 
 .family-select-root .envelope-label {
   position: absolute;
