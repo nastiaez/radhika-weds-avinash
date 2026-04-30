@@ -121,7 +121,7 @@ export const en: Translations = {
       "To ensure everyone can be fully present, we have chosen to keep our ceremonies camera-free. Our admin will mask the camera on your phone at the entrance — this applies to everyone without exception. Our official photographer will cover everything, and the full gallery will be shared after the wedding.",
     q2Title: "Will photos be shared?",
     q2Body:
-      "Yes. The complete gallery will be shared with all guests following the celebrations.",
+      "Yes! After the celebrations, we'll send each guest a personalised selection of photos featuring them, straight to their email.",
     dressGroupLabel: "Dress Code",
     q3Title: "What should I wear?",
     q3Body:
