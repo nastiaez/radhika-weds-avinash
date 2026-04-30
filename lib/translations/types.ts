@@ -7,6 +7,8 @@ export type Translations = {
     langLabel: string;
   };
   hero: {
+    namesLine1: string;
+    namesLine2: string;
     welcome: string;
     tagline1: string;
     tagline2: string;

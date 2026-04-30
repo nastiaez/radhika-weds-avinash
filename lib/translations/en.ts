@@ -9,6 +9,8 @@ export const en: Translations = {
     langLabel: "English",
   },
   hero: {
+    namesLine1: "Radhika",
+    namesLine2: "& Avinash",
     welcome: "With hearts full of joy, the Ranganathans and the Karandikars welcome you!",
     tagline1: "Come. Celebrate with us. Laugh loudly. Bless deeply.",
     tagline2: "Love freely. And enjoy wholeheartedly.",

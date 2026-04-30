@@ -85,8 +85,8 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
       {/* HERO */}
       <section id="hero" ref={heroRef}>
         <h1 className="hero-names" ref={heroNamesRef}>
-          Radhika<br />
-          <em>&amp; Avinash</em>
+          {t.hero.namesLine1}<br />
+          <em>{t.hero.namesLine2}</em>
         </h1>
         <p className="hero-para" ref={heroParaRef}>
           {t.hero.welcome}<br />
