@@ -100,6 +100,29 @@ html {
 }
 
 /* ═══════════════════════════════════
+   ENTRY ANIMATION KEYFRAMES
+═══════════════════════════════════ */
+@keyframes fsEntryFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fsEntryUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fsEntryRule {
+  from { opacity: 1; transform: scaleX(0); }
+  to   { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes fsEntryEnvelopes {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════
    FAMILY SELECT PAGE
 ═══════════════════════════════════ */
 .family-select-root {
@@ -110,6 +133,50 @@ html {
   background: #F3EBCF;
   color: #1C1712;
   font-family: var(--font-body), sans-serif;
+}
+
+/* Elements hidden until .loaded class is applied */
+.family-select-root .eyebrow,
+.family-select-root .names-heading,
+.family-select-root .shimmer-rule,
+.family-select-root .prompt,
+.family-select-root .envelopes {
+  opacity: 0;
+}
+
+/* Gold shimmer rule between heading and prompt */
+.family-select-root .shimmer-rule {
+  width: 100%;
+  max-width: 320px;
+  height: 1.5px;
+  background: linear-gradient(to right, transparent, #B8902A 30%, #B8902A 70%, transparent);
+  margin: 0.6rem auto 0.8rem;
+  transform-origin: left center;
+}
+
+/* Staggered entry animations — triggered by .loaded class on root */
+.family-select-root.loaded .eyebrow {
+  animation: fsEntryFade 400ms ease forwards;
+}
+
+.family-select-root.loaded .names-heading {
+  animation: fsEntryUp 500ms ease forwards;
+  animation-delay: 300ms;
+}
+
+.family-select-root.loaded .shimmer-rule {
+  animation: fsEntryRule 500ms ease forwards;
+  animation-delay: 600ms;
+}
+
+.family-select-root.loaded .prompt {
+  animation: fsEntryFade 400ms ease forwards;
+  animation-delay: 900ms;
+}
+
+.family-select-root.loaded .envelopes {
+  animation: fsEntryEnvelopes 500ms ease-out forwards;
+  animation-delay: 1000ms;
 }
 
 .family-select-root #screen-select {
@@ -125,8 +192,7 @@ html {
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #1C1712;
-  opacity: 0.6;
+  color: rgba(28, 23, 18, 0.6);
   line-height: 2;
 }
 
@@ -146,7 +212,7 @@ html {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  opacity: 0.6;
+  color: rgba(28, 23, 18, 0.6);
   margin-bottom: 0rem;
 }
 
