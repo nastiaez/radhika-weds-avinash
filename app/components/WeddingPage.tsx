@@ -20,6 +20,7 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
   const navRef = useRef<HTMLElement>(null);
 
   const [langOpen, setLangOpen] = useState(false);
+  const [manjalOpen, setManjalOpen] = useState(false);
   const langRef = useRef<HTMLLIElement>(null);
 
   const t = translations[lang];
@@ -36,6 +37,11 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
     ta: "தமிழ்",
     mr: "मराठी",
   };
+
+  useEffect(() => {
+    document.body.style.overflow = manjalOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [manjalOpen]);
 
   useEffect(() => {
     if (!langOpen) return;
@@ -112,7 +118,7 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
           {t.hero.tagline2}
         </p>
         <div className="hero-buttons" ref={heroButtonsRef}>
-          <a href="#" className="btn btn-fill" download>{t.hero.ctaManjal}</a>
+          <button className="btn btn-fill" onClick={() => setManjalOpen(true)}>{t.hero.ctaManjal}</button>
           <a href="#info" className="btn btn-outline">{t.hero.ctaMoreInfo}</a>
         </div>
       </section>
@@ -390,6 +396,19 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
           </div>
         </div>
       </section>
+
+      {manjalOpen && (
+        <div className="manjal-overlay" onClick={() => setManjalOpen(false)}>
+          <div className="manjal-card" onClick={(e) => e.stopPropagation()}>
+            <button className="manjal-close" onClick={() => setManjalOpen(false)}>✕</button>
+            <img src="/media/manjal_pathirikai.png" alt="Manjal Pathirikkai" className="manjal-img" />
+            <div className="manjal-body">
+              <p className="manjal-title">{t.hero.ctaManjal}</p>
+              <a href="/media/manjal_pathirikai.png" download className="manjal-download">↓ Download</a>
+            </div>
+          </div>
+        </div>
+      )}
 
       <footer>
         <p style={{ marginBottom: "0.5rem" }}><strong>{t.footer.names}</strong></p>
