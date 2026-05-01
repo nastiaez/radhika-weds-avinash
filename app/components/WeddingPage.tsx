@@ -149,46 +149,47 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
           <h2 className="section-title">{t.schedule.sectionTitle}</h2>
           <p className="schedule-venue-note">{t.schedule.venueNote}</p>
 
-          {showDay1 && (
+          <p className="schedule-day-label">{t.schedule.day1Label}</p>
+          <div className="schedule-list">
+            {isFamily && (
+              <div className="schedule-event">
+                <div className="schedule-dot" />
+                <div className="schedule-time">{t.schedule.engagementTime}</div>
+                <h3>{t.schedule.engagementTitle}</h3>
+                <p>{t.schedule.engagementDesc}</p>
+                <p className="schedule-dress">{t.schedule.engagementDress}</p>
+              </div>
+            )}
+            <div className="schedule-event">
+              <div className="schedule-dot" />
+              <div className="schedule-time">{t.schedule.receptionTime}</div>
+              <h3>{t.schedule.receptionTitle}</h3>
+              <p>{t.schedule.receptionDesc}</p>
+              <p className="schedule-dress">{t.schedule.receptionDress}</p>
+            </div>
+          </div>
+
+          {isFamily && (
             <>
-              <p className="schedule-day-label">{t.schedule.day1Label}</p>
-              <p className="schedule-day-note">{t.schedule.day1Note}</p>
+              <p className="schedule-day-label">{t.schedule.day2Label}</p>
               <div className="schedule-list">
                 <div className="schedule-event">
                   <div className="schedule-dot" />
-                  <div className="schedule-time">{t.schedule.engagementTime}</div>
-                  <h3>{t.schedule.engagementTitle}</h3>
-                  <p>{t.schedule.engagementDesc}</p>
-                  <p className="schedule-dress">{t.schedule.engagementDress}</p>
+                  <div className="schedule-time">{t.schedule.weddingTime}</div>
+                  <h3>{t.schedule.weddingTitle}</h3>
+                  <p>{t.schedule.weddingDesc}</p>
+                  <p className="schedule-dress">{t.schedule.weddingDress}</p>
                 </div>
                 <div className="schedule-event">
                   <div className="schedule-dot" />
-                  <div className="schedule-time">{t.schedule.receptionTime}</div>
-                  <h3>{t.schedule.receptionTitle}</h3>
-                  <p>{t.schedule.receptionDesc}</p>
-                  <p className="schedule-dress">{t.schedule.receptionDress}</p>
+                  <div className="schedule-time">{t.schedule.lunchTime}</div>
+                  <h3>{t.schedule.lunchTitle}</h3>
+                  <p>{t.schedule.lunchDesc}</p>
+                  <p className="schedule-dress">{t.schedule.lunchDress}</p>
                 </div>
               </div>
             </>
           )}
-
-          <p className="schedule-day-label">{t.schedule.day2Label}</p>
-          <div className="schedule-list">
-            <div className="schedule-event">
-              <div className="schedule-dot" />
-              <div className="schedule-time">{t.schedule.weddingTime}</div>
-              <h3>{t.schedule.weddingTitle}</h3>
-              <p>{t.schedule.weddingDesc}</p>
-              <p className="schedule-dress">{t.schedule.weddingDress}</p>
-            </div>
-            <div className="schedule-event">
-              <div className="schedule-dot" />
-              <div className="schedule-time">{t.schedule.lunchTime}</div>
-              <h3>{t.schedule.lunchTitle}</h3>
-              <p>{t.schedule.lunchDesc}</p>
-              <p className="schedule-dress">{t.schedule.lunchDress}</p>
-            </div>
-          </div>
         </div>
       </section>
 
