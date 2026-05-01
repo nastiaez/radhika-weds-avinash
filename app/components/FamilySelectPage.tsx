@@ -56,6 +56,11 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
     }, 400);
   }
 
+  function handleBack() {
+    setSelectedFamily(null);
+    setScreen("select");
+  }
+
   return (
     <div className={`family-select-root lang-${lang}${loaded ? " loaded" : ""}`}>
       {screen === "select" && (
@@ -155,6 +160,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
               <button className="btn-cta" onClick={handleCTA}>
                 See What Awaits
               </button>
+              <button className="btn-back" onClick={handleBack}>← choose differently</button>
             </div>
           </div>
         </section>

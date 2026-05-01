@@ -470,6 +470,26 @@ html {
 
 .family-select-root .btn-cta:hover { opacity: 0.88; }
 
+.family-select-root .btn-back {
+  display: block;
+  margin: 0.6rem auto 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(28, 23, 18, 0.35);
+  padding: 0.25rem 0;
+  transition: color 200ms ease;
+}
+
+.family-select-root .btn-back:hover {
+  color: rgba(28, 23, 18, 0.65);
+}
+
 .family-select-root .card-inner-border {
   position: absolute;
   inset: 10px;
