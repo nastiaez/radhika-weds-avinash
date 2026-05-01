@@ -88,8 +88,8 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
               >
                 <div className="envelope-area">
                   <img className="env-base" src="/media/base ractangle 1.png" alt="" />
-                  <img className="env-letter-rect" src="/media/letter on hover 2 - envelope.png" alt="" />
                   <img className="env-flap" src="/media/letter on hover 2 - back.png" alt="" />
+                  <img className="env-letter-rect" src="/media/letter on hover 2 - envelope.png" alt="" />
                   <img className="env-front" src="/media/envelope on the front 3.png" alt="" />
                   <div className="envelope-label">
                     <p className="family-name">

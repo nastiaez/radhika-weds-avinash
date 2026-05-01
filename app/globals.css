@@ -251,18 +251,18 @@ html {
 /* 4-layer envelope stack */
 .family-select-root .env-base       { z-index: 1; }
 
-.family-select-root .env-letter-rect {
+.family-select-root .env-flap {
   z-index: 2;
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 350ms cubic-bezier(0.25, 0.1, 0.25, 1),
-              transform 350ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 300ms ease;
 }
 
-.family-select-root .env-flap {
+.family-select-root .env-letter-rect {
   z-index: 3;
   opacity: 0;
-  transition: opacity 300ms ease;
+  transform: translateY(0);
+  transition: opacity 350ms cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 350ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .family-select-root .env-front      { z-index: 4; }
