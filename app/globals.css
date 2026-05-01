@@ -362,6 +362,13 @@ html {
 .family-select-root .card-bells {
   width: 100%;
   display: block;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s;
+}
+.family-select-root .card-bells.img-ready {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .family-select-root .card-body {
@@ -398,10 +405,21 @@ html {
   height: 72px;
   width: auto;
   object-fit: contain;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.8s ease 0.45s, transform 0.8s ease 0.45s;
+}
+.family-select-root .card-branch.img-ready {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .family-select-root .card-branch.mirror {
-  transform: scaleX(-1);
+  transform: scaleX(-1) translateY(4px);
+}
+.family-select-root .card-branch.mirror.img-ready {
+  opacity: 1;
+  transform: scaleX(-1) translateY(0);
 }
 
 .family-select-root .card-main-name {

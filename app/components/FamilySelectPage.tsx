@@ -109,7 +109,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
       {screen === "card" && selectedFamily && (
         <section id="screen-card" className="visible" aria-live="polite">
           <div className="invitation-card">
-            <img className="card-bells" src="/media/hanging bells.png" alt="" />
+            <img className="card-bells" src="/media/hanging bells.png" alt="" onLoad={e => e.currentTarget.classList.add('img-ready')} />
             <div className="card-body">
               {selectedFamily === "ranganathan" ? (
                 <>
@@ -120,8 +120,8 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
                     Request the pleasure of your company<br />at the marriage of
                   </p>
                   <div className="card-branch-row">
-                    <img className="card-branch" src="/media/botanical branch.png" alt="" />
-                    <img className="card-branch mirror" src="/media/botanical branch.png" alt="" />
+                    <img className="card-branch" src="/media/botanical branch.png" alt="" onLoad={e => e.currentTarget.classList.add('img-ready')} />
+                    <img className="card-branch mirror" src="/media/botanical branch.png" alt="" onLoad={e => e.currentTarget.classList.add('img-ready')} />
                   </div>
                   <p className="card-label">Their Son</p>
                   <p className="card-main-name">Avinash Ranganathan</p>
@@ -140,8 +140,8 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
                     Request the pleasure of your company<br />at the marriage of
                   </p>
                   <div className="card-branch-row">
-                    <img className="card-branch" src="/media/botanical branch.png" alt="" />
-                    <img className="card-branch mirror" src="/media/botanical branch.png" alt="" />
+                    <img className="card-branch" src="/media/botanical branch.png" alt="" onLoad={e => e.currentTarget.classList.add('img-ready')} />
+                    <img className="card-branch mirror" src="/media/botanical branch.png" alt="" onLoad={e => e.currentTarget.classList.add('img-ready')} />
                   </div>
                   <p className="card-label">Their Daughter</p>
                   <p className="card-main-name">Radhika Karandikar</p>
