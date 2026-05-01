@@ -20,6 +20,9 @@ export type Translations = {
     whenLabel: string;
     whenDate: string;
     whenTime: string;
+    whenTimeFamilyDay1: string;
+    whenDate2: string;
+    whenTime2: string;
     whereLabel: string;
     whereName: string;
     whereMapLink: string;

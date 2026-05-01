@@ -107,8 +107,15 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
             <div className="info-card">
               <div className="info-card-icon">{t.info.whenLabel}</div>
               <h3>{t.info.whenDate}</h3>
-              <p>{t.info.whenTime}</p>
+              <p>{isFamily ? t.info.whenTimeFamilyDay1 : t.info.whenTime}</p>
             </div>
+            {isFamily && (
+              <div className="info-card">
+                <div className="info-card-icon">{t.info.whenLabel}</div>
+                <h3>{t.info.whenDate2}</h3>
+                <p>{t.info.whenTime2}</p>
+              </div>
+            )}
             <div className="info-card">
               <div className="info-card-icon">{t.info.whereLabel}</div>
               <h3>{t.info.whereName}</h3>

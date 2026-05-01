@@ -22,8 +22,11 @@ export const mr: Translations = {
   info: {
     sectionTitle: "उत्सव",
     whenLabel: "कधी",
-    whenDate: "२ जुलै २०२६",
-    whenTime: "गुरुवार · सकाळी ११:०० पासून",
+    whenDate: "१ जुलै २०२६",
+    whenTime: "बुधवार · संध्याकाळी ७:००",
+    whenTimeFamilyDay1: "बुधवार · संध्याकाळी ५:०० पासून",
+    whenDate2: "२ जुलै २०२६",
+    whenTime2: "गुरुवार · सकाळी ९:०० पासून",
     whereLabel: "कुठे",
     whereName: "द्वारका पॅलेस",
     whereMapLink: "Google Maps वर उघडा →",

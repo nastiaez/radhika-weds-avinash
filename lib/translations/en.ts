@@ -20,8 +20,11 @@ export const en: Translations = {
   info: {
     sectionTitle: "The Celebration",
     whenLabel: "When",
-    whenDate: "2 July 2026",
-    whenTime: "Thursday · 11:00 onwards",
+    whenDate: "1 July 2026",
+    whenTime: "Wednesday · 7:00 pm",
+    whenTimeFamilyDay1: "Wednesday · from 5:00 pm",
+    whenDate2: "2 July 2026",
+    whenTime2: "Thursday · from 9:00 am",
     whereLabel: "Where",
     whereName: "Dwaraka Palace",
     whereMapLink: "Open in Google Maps →",

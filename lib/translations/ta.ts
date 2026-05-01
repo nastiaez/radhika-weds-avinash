@@ -22,8 +22,11 @@ export const ta: Translations = {
   info: {
     sectionTitle: "கொண்டாட்டம்",
     whenLabel: "எப்போது",
-    whenDate: "2 ஜூலை 2026",
-    whenTime: "வியாழக்கிழமை · காலை 11:00 முதல்",
+    whenDate: "1 ஜூலை 2026",
+    whenTime: "புதன்கிழமை · மாலை 7:00",
+    whenTimeFamilyDay1: "புதன்கிழமை · மாலை 5:00 முதல்",
+    whenDate2: "2 ஜூலை 2026",
+    whenTime2: "வியாழக்கிழமை · காலை 9:00 முதல்",
     whereLabel: "எங்கே",
     whereName: "த்வாரகா பேலஸ்",
     whereMapLink: "கூகுள் மேப்பில் திற →",
