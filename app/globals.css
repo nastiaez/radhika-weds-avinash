@@ -267,10 +267,10 @@ html {
 
 .family-select-root .env-front      { z-index: 4; }
 
-/* Hover: wrapper scale + gold glow */
+/* Hover: wrapper scale + rich warm shadow */
 .family-select-root .envelope-wrapper:hover {
   transform: scale(1.04);
-  filter: drop-shadow(0 4px 16px rgba(184,144,42,0.35));
+  filter: drop-shadow(0 6px 24px rgba(58, 18, 12, 0.12));
 }
 
 /* Hover: letter slides up, flap appears */
@@ -287,7 +287,7 @@ html {
 .family-select-root .envelope-wrapper.clicking {
   opacity: 0.3;
   transform: scale(1.04);
-  filter: drop-shadow(0 4px 16px rgba(184,144,42,0.35));
+  filter: drop-shadow(0 6px 24px rgba(58, 18, 12, 0.12));
   transition: opacity 200ms ease;
   pointer-events: none;
 }
@@ -342,12 +342,12 @@ html {
 }
 
 .family-select-root #screen-card.visible {
-  animation: cardEntrance 0.4s ease forwards;
+  animation: cardEntrance 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes cardEntrance {
-  from { opacity: 0; transform: scale(0.97); }
-  to   { opacity: 1; transform: scale(1); }
+  from { opacity: 0; transform: translateY(72px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .family-select-root .invitation-card {
