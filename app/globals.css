@@ -302,6 +302,21 @@ html {
   opacity: 1;
 }
 
+/* Mobile tap peek — mirrors hover state so letter slides up before exit */
+.family-select-root .envelope-wrapper.peeking {
+  transform: scale(1.04);
+  filter: drop-shadow(0 6px 24px rgba(58, 18, 12, 0.12));
+}
+
+.family-select-root .envelope-wrapper.peeking .env-letter-rect {
+  opacity: 1;
+  transform: translateY(-55px);
+}
+
+.family-select-root .envelope-wrapper.peeking .env-flap {
+  opacity: 1;
+}
+
 .family-select-root .envelope-label {
   position: absolute;
   top: 90%;

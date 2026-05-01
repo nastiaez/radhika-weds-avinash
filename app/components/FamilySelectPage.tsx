@@ -17,6 +17,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
   const [screen, setScreen] = useState<"select" | "card">("select");
   const [selectedFamily, setSelectedFamily] = useState<"ranganathan" | "karandikar" | null>(null);
   const [clicking, setClicking] = useState<"ranganathan" | "karandikar" | null>(null);
+  const [peeking, setPeeking] = useState<"ranganathan" | "karandikar" | null>(null);
   const [transitioning, setTransitioning] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
@@ -36,12 +37,23 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
   }
 
   function handleEnvelopeClick(family: "ranganathan" | "karandikar") {
-    setClicking(family);
-    const delay = isMobile() ? 150 : 200;
-    setTimeout(() => {
-      setClicking(null);
-      showCard(family);
-    }, delay);
+    if (isMobile()) {
+      setPeeking(family);
+      setTimeout(() => {
+        setPeeking(null);
+        setClicking(family);
+        setTimeout(() => {
+          setClicking(null);
+          showCard(family);
+        }, 150);
+      }, 350);
+    } else {
+      setClicking(family);
+      setTimeout(() => {
+        setClicking(null);
+        showCard(family);
+      }, 200);
+    }
   }
 
   function handleCTA(e: React.MouseEvent) {
@@ -75,7 +87,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
             {(["ranganathan", "karandikar"] as const).map((family) => (
               <div
                 key={family}
-                className={`envelope-wrapper${clicking === family ? " clicking" : ""}`}
+                className={`envelope-wrapper${clicking === family ? " clicking" : ""}${peeking === family ? " peeking" : ""}`}
                 role="button"
                 tabIndex={0}
                 aria-label={
