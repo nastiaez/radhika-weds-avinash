@@ -601,7 +601,8 @@ html {
   letter-spacing: 0.08em;
 }
 
-.wedding-page .nav-lang:hover .lang-dropdown { display: block; }
+.wedding-page .nav-lang:hover .lang-dropdown,
+.wedding-page .lang-dropdown.open { display: block; }
 
 .wedding-page #hero {
   min-height: 130vh;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { translations } from "@/lib/translations";
 
 type Lang = "en" | "ta" | "mr";
@@ -19,6 +19,9 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
   const heroButtonsRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
 
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLLIElement>(null);
+
   const t = translations[lang];
   const showDay1 = type === "2";
   const isFamily = type === "2";
@@ -33,6 +36,17 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
     ta: "தமிழ்",
     mr: "मराठी",
   };
+
+  useEffect(() => {
+    if (!langOpen) return;
+    function handleOutsideClick(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, [langOpen]);
 
   useEffect(() => {
     const reveal = (el: HTMLElement | null, delay: number) => {
@@ -60,14 +74,18 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
           <li><a href="#story">{t.nav.ourStory}</a></li>
           <li><a href="#info">{t.nav.info}</a></li>
           <li><a href="#faq">{t.nav.faq}</a></li>
-          <li className="nav-lang">
-            <a href={langPaths[lang]}>{langLabels[lang]}</a>
-            <div className="lang-dropdown">
+          <li className="nav-lang" ref={langRef}>
+            <a
+              href={langPaths[lang]}
+              onClick={(e) => { e.preventDefault(); setLangOpen((o) => !o); }}
+            >{langLabels[lang]}</a>
+            <div className={`lang-dropdown${langOpen ? " open" : ""}`}>
               {(["en", "ta", "mr"] as Lang[]).map((l) => (
                 <a
                   key={l}
                   href={langPaths[l]}
                   onClick={(e) => {
+                    setLangOpen(false);
                     if (onLangChange) {
                       e.preventDefault();
                       onLangChange(l);
