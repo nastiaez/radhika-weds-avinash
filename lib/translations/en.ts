@@ -5,7 +5,7 @@ export const en: Translations = {
   nav: {
     ourStory: "Our Story",
     info: "Info",
-    faq: "FAQ",
+    faq: "More Details",
     langLabel: "English",
   },
   hero: {
@@ -114,14 +114,14 @@ export const en: Translations = {
     ch4closing: "And so begins forever.",
   },
   faq: {
-    sectionTitle: "FAQ",
+    sectionTitle: "More Details",
     photosGroupLabel: "Phone & Photography",
     q1Title: "Can I take photos?",
     q1Body:
       "To ensure everyone can be fully present, we have chosen to keep our ceremonies camera-free. Our admin will mask the camera on your phone at the entrance — this applies to everyone without exception. Our official photographer will cover everything, and the full gallery will be shared after the wedding.",
     q2Title: "Will photos be shared?",
     q2Body:
-      "Yes! After the celebrations, we'll send each guest a personalised selection of photos featuring them, straight to their email.",
+      "We've set up professional photo booths so you can capture beautiful memories with your loved ones.",
     dressGroupLabel: "Dress Code",
     q3Title: "What should I wear?",
     q3Body:
