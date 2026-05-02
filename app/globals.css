@@ -888,9 +888,9 @@ html {
 .wedding-page .schedule-dress {
   font-family: var(--font-body), sans-serif;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   color: #1A1009;
-  opacity: 0.5;
+  opacity: 0.72;
   margin-top: 0.4rem;
 }
 
@@ -1034,7 +1034,7 @@ html {
   opacity: 0.7;
   max-width: 600px;
   line-height: 1.7;
-  margin-bottom: 3rem;
+  margin-bottom: 1.2rem;
 }
 
 .wedding-page .story-chapter-label {
@@ -1114,7 +1114,7 @@ html {
 ═══════════════════════════════════ */
 .wedding-page .story-expand-btn {
   display: inline-block;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   color: #A67C1E;
   font-family: var(--font-body), sans-serif;
   font-size: 15px;
