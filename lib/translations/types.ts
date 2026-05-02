@@ -100,6 +100,26 @@ export type Translations = {
     ch4p3: string;
     ch4closing: string;
   };
+  storyGuest: {
+    tagline: string;
+    readMore: string;
+    ch1Label: string;
+    ch1Title: string;
+    ch1Location: string;
+    ch1p1: string;
+    ch2Label: string;
+    ch2Title: string;
+    ch2Location: string;
+    ch2p1: string;
+    ch3Label: string;
+    ch3Title: string;
+    ch3Location: string;
+    ch3p1: string;
+    ch4Label: string;
+    ch4Title: string;
+    ch4p1: string;
+    ch4p2: string;
+  };
   faq: {
     sectionTitle: string;
     photosGroupLabel: string;

@@ -1110,6 +1110,31 @@ html {
 .wedding-page .faq-item p { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(245,237,216,0.85); }
 
 /* ═══════════════════════════════════
+   STORY EXPAND BUTTON
+═══════════════════════════════════ */
+.wedding-page .story-expand-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #C9972A;
+  font-family: var(--font-body), sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #C9972A;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 2px;
+  background: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.wedding-page .story-expand-btn:hover { opacity: 0.75; }
+
+/* ═══════════════════════════════════
    SCROLL REVEAL
 ═══════════════════════════════════ */
 .scroll-reveal {

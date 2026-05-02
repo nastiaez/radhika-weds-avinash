@@ -21,6 +21,7 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
 
   const [langOpen, setLangOpen] = useState(false);
   const [manjalOpen, setManjalOpen] = useState(false);
+  const [storyOpen, setStoryOpen] = useState(false);
   const langRef = useRef<HTMLLIElement>(null);
 
   const t = translations[lang];
@@ -135,7 +136,7 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
           {t.hero.tagline2}
         </p>
         <div className="hero-buttons" ref={heroButtonsRef}>
-          <button className="btn btn-fill" onClick={() => setManjalOpen(true)}>{t.hero.ctaManjal}</button>
+          {isFamily && <button className="btn btn-fill" onClick={() => setManjalOpen(true)}>{t.hero.ctaManjal}</button>}
           <a href="#info" className="btn btn-outline">{t.hero.ctaMoreInfo}</a>
         </div>
       </section>
@@ -318,39 +319,80 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
       >
         <div className="section-inner">
           <h2 className="section-title scroll-reveal">{t.story.sectionTitle}</h2>
-          <p className="story-tagline scroll-reveal">{t.story.tagline}</p>
-          <div className="story-chapters">
-            <div className="story-chapter scroll-reveal">
-              <p className="story-chapter-label">{t.story.ch1Label}</p>
-              <h3>{t.story.ch1Title}</h3>
-              <p className="story-location">{t.story.ch1Location}</p>
-              <p>{t.story.ch1p1}</p>
-              <p>{t.story.ch1p2}</p>
-            </div>
-            <div className="story-chapter scroll-reveal">
-              <p className="story-chapter-label">{t.story.ch2Label}</p>
-              <h3>{t.story.ch2Title}</h3>
-              <p className="story-location">{t.story.ch2Location}</p>
-              <p>{t.story.ch2p1}</p>
-              <p>{t.story.ch2p2}</p>
-            </div>
-            <div className="story-chapter scroll-reveal">
-              <p className="story-chapter-label">{t.story.ch3Label}</p>
-              <h3>{t.story.ch3Title}</h3>
-              <p className="story-location">{t.story.ch3Location}</p>
-              <p>{t.story.ch3p1}</p>
-              <p className="story-quote">{t.story.ch3Quote}</p>
-              <p>{t.story.ch3p2}</p>
-            </div>
-            <div className="story-chapter scroll-reveal">
-              <p className="story-chapter-label">{t.story.ch4Label}</p>
-              <h3>{t.story.ch4Title}</h3>
-              <p>{t.story.ch4p1}</p>
-              <p>{t.story.ch4p2}</p>
-              {t.story.ch4p3 && <p>{t.story.ch4p3}</p>}
-              <p className="story-closing"><em>{t.story.ch4closing}</em></p>
-            </div>
-          </div>
+          {isFamily ? (
+            <>
+              <p className="story-tagline scroll-reveal">{t.story.tagline}</p>
+              <div className="story-chapters">
+                <div className="story-chapter scroll-reveal">
+                  <p className="story-chapter-label">{t.story.ch1Label}</p>
+                  <h3>{t.story.ch1Title}</h3>
+                  <p className="story-location">{t.story.ch1Location}</p>
+                  <p>{t.story.ch1p1}</p>
+                  <p>{t.story.ch1p2}</p>
+                </div>
+                <div className="story-chapter scroll-reveal">
+                  <p className="story-chapter-label">{t.story.ch2Label}</p>
+                  <h3>{t.story.ch2Title}</h3>
+                  <p className="story-location">{t.story.ch2Location}</p>
+                  <p>{t.story.ch2p1}</p>
+                  <p>{t.story.ch2p2}</p>
+                </div>
+                <div className="story-chapter scroll-reveal">
+                  <p className="story-chapter-label">{t.story.ch3Label}</p>
+                  <h3>{t.story.ch3Title}</h3>
+                  <p className="story-location">{t.story.ch3Location}</p>
+                  <p>{t.story.ch3p1}</p>
+                  <p className="story-quote">{t.story.ch3Quote}</p>
+                  <p>{t.story.ch3p2}</p>
+                </div>
+                <div className="story-chapter scroll-reveal">
+                  <p className="story-chapter-label">{t.story.ch4Label}</p>
+                  <h3>{t.story.ch4Title}</h3>
+                  <p>{t.story.ch4p1}</p>
+                  <p>{t.story.ch4p2}</p>
+                  {t.story.ch4p3 && <p>{t.story.ch4p3}</p>}
+                  <p className="story-closing"><em>{t.story.ch4closing}</em></p>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="story-tagline scroll-reveal">{t.storyGuest.tagline}</p>
+              {storyOpen && (
+                <div className="story-chapters">
+                  <div className="story-chapter scroll-reveal">
+                    <p className="story-chapter-label">{t.storyGuest.ch1Label}</p>
+                    <h3>{t.storyGuest.ch1Title}</h3>
+                    <p className="story-location">{t.storyGuest.ch1Location}</p>
+                    <p>{t.storyGuest.ch1p1}</p>
+                  </div>
+                  <div className="story-chapter scroll-reveal">
+                    <p className="story-chapter-label">{t.storyGuest.ch2Label}</p>
+                    <h3>{t.storyGuest.ch2Title}</h3>
+                    <p className="story-location">{t.storyGuest.ch2Location}</p>
+                    <p>{t.storyGuest.ch2p1}</p>
+                  </div>
+                  <div className="story-chapter scroll-reveal">
+                    <p className="story-chapter-label">{t.storyGuest.ch3Label}</p>
+                    <h3>{t.storyGuest.ch3Title}</h3>
+                    <p className="story-location">{t.storyGuest.ch3Location}</p>
+                    <p>{t.storyGuest.ch3p1}</p>
+                  </div>
+                  <div className="story-chapter scroll-reveal">
+                    <p className="story-chapter-label">{t.storyGuest.ch4Label}</p>
+                    <h3>{t.storyGuest.ch4Title}</h3>
+                    <p>{t.storyGuest.ch4p1}</p>
+                    <p>{t.storyGuest.ch4p2}</p>
+                  </div>
+                </div>
+              )}
+              {!storyOpen && (
+                <button className="story-expand-btn scroll-reveal" onClick={() => setStoryOpen(true)}>
+                  {t.storyGuest.readMore}
+                </button>
+              )}
+            </>
+          )}
         </div>
       </section>
 
