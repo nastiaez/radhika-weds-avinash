@@ -1270,6 +1270,7 @@ html {
   .wedding-page .venue-photos { grid-template-columns: 1fr; }
   .wedding-page .hotel-grid { grid-template-columns: 1fr; }
   .wedding-page section { padding: 4rem 1.25rem; }
+  .wedding-page #schedule { padding-right: 3.5rem; }
   .wedding-page #hero {
     background-size: 210% auto;
     background-position: center 72px;
