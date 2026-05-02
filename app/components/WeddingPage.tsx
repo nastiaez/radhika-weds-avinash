@@ -359,26 +359,26 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
             <>
               <p className="story-tagline scroll-reveal">{t.storyGuest.tagline}</p>
               {storyOpen && (
-                <div className="story-chapters">
-                  <div className="story-chapter scroll-reveal">
+                <div className="story-chapters story-chapters-expand">
+                  <div className="story-chapter">
                     <p className="story-chapter-label">{t.storyGuest.ch1Label}</p>
                     <h3>{t.storyGuest.ch1Title}</h3>
                     <p className="story-location">{t.storyGuest.ch1Location}</p>
                     <p>{t.storyGuest.ch1p1}</p>
                   </div>
-                  <div className="story-chapter scroll-reveal">
+                  <div className="story-chapter">
                     <p className="story-chapter-label">{t.storyGuest.ch2Label}</p>
                     <h3>{t.storyGuest.ch2Title}</h3>
                     <p className="story-location">{t.storyGuest.ch2Location}</p>
                     <p>{t.storyGuest.ch2p1}</p>
                   </div>
-                  <div className="story-chapter scroll-reveal">
+                  <div className="story-chapter">
                     <p className="story-chapter-label">{t.storyGuest.ch3Label}</p>
                     <h3>{t.storyGuest.ch3Title}</h3>
                     <p className="story-location">{t.storyGuest.ch3Location}</p>
                     <p>{t.storyGuest.ch3p1}</p>
                   </div>
-                  <div className="story-chapter scroll-reveal">
+                  <div className="story-chapter">
                     <p className="story-chapter-label">{t.storyGuest.ch4Label}</p>
                     <h3>{t.storyGuest.ch4Title}</h3>
                     <p>{t.storyGuest.ch4p1}</p>
