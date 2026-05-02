@@ -496,13 +496,13 @@ html {
   font-size: 0.6rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(28, 23, 18, 0.35);
+  color: rgba(28, 23, 18, 0.65);
   padding: 0.25rem 0;
   transition: color 200ms ease;
 }
 
 .family-select-root .btn-back:hover {
-  color: rgba(28, 23, 18, 0.65);
+  color: rgba(28, 23, 18, 0.9);
 }
 
 .family-select-root .card-inner-border {
@@ -838,10 +838,10 @@ html {
 .wedding-page .schedule-time {
   font-family: var(--font-body), sans-serif;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #C9972A;
+  color: #A67C1E;
   margin-bottom: 0.25rem;
 }
 
@@ -867,10 +867,10 @@ html {
 .wedding-page .schedule-day-label {
   font-family: var(--font-body), sans-serif;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #C9972A;
+  color: #A67C1E;
   margin-bottom: 0.3rem;
   margin-top: 2.5rem;
 }
@@ -1115,14 +1115,14 @@ html {
 .wedding-page .story-expand-btn {
   display: inline-block;
   margin-top: 1.5rem;
-  color: #C9972A;
+  color: #A67C1E;
   font-family: var(--font-body), sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid #C9972A;
+  border-bottom: 1px solid #A67C1E;
   border-top: none;
   border-left: none;
   border-right: none;
