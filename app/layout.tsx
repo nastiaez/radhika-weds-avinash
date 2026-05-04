@@ -7,6 +7,7 @@ import {
   Hind,
 } from "next/font/google";
 import "./globals.css";
+import MusicProvider from "@/app/components/MusicProvider";
 
 // Body font — covers Latin + Tamil
 const catamaran = Catamaran({
@@ -70,7 +71,7 @@ export default function RootLayout({
       className={`${catamaran.variable} ${cormorantGaramond.variable} ${notoSerifTamil.variable} ${notoSerifDevanagari.variable} ${hind.variable}`}
     >
       <body className="bg-cream text-[#2C1A0E] font-body min-h-screen">
-        {children}
+        <MusicProvider>{children}</MusicProvider>
       </body>
     </html>
   );

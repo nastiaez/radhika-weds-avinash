@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useMusicContext } from "./MusicContext";
 
 type Lang = "en" | "ta" | "mr";
 type GuestType = "1" | "2";
@@ -14,6 +15,7 @@ interface Props {
 
 export default function FamilySelectPage({ lang, type, onReady }: Props) {
   const router = useRouter();
+  const { startMusic } = useMusicContext();
   const [screen, setScreen] = useState<"select" | "card">("select");
   const [selectedFamily, setSelectedFamily] = useState<"ranganathan" | "karandikar" | null>(null);
   const [clicking, setClicking] = useState<"ranganathan" | "karandikar" | null>(null);
@@ -58,6 +60,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
 
   function handleCTA(e: React.MouseEvent) {
     e.preventDefault();
+    startMusic();
     setTransitioning(true);
     setTimeout(() => {
       if (onReady) {
