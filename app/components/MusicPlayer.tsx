@@ -1,7 +1,7 @@
 "use client";
 
 interface Props {
-  volume: number;       // 0–1
+  volume: number;
   muted: boolean;
   onVolumeChange: (v: number) => void;
   onToggleMute: () => void;
@@ -9,7 +9,7 @@ interface Props {
 
 function SpeakerIcon({ volume, muted }: { volume: number; muted: boolean }) {
   const level =
-    muted || volume === 0 ? "muted"
+    muted || volume <= 0.01 ? "muted"
     : volume < 0.34 ? "low"
     : volume < 0.67 ? "medium"
     : "full";
@@ -49,6 +49,10 @@ function SpeakerIcon({ volume, muted }: { volume: number; muted: boolean }) {
 }
 
 export default function MusicPlayer({ volume, muted, onVolumeChange, onToggleMute }: Props) {
+  const muteLabel = muted || volume <= 0.01
+    ? "Unmute music"
+    : `Music volume: ${Math.round(volume * 100)}%`;
+
   return (
     <div
       style={{
@@ -70,7 +74,7 @@ export default function MusicPlayer({ volume, muted, onVolumeChange, onToggleMut
     >
       <button
         onClick={onToggleMute}
-        aria-label="Toggle mute"
+        aria-label={muteLabel}
         style={{
           background: "none",
           border: "none",
@@ -87,35 +91,32 @@ export default function MusicPlayer({ volume, muted, onVolumeChange, onToggleMut
         <SpeakerIcon volume={volume} muted={muted} />
       </button>
 
-      {/* Vertical slider: rotate a horizontal range input */}
-      <div style={{ height: "80px", minWidth: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <input
-          type="range"
-          min={0}
-          max={1}
-          step={0.01}
-          value={muted ? 0 : volume}
-          onChange={(e) => onVolumeChange(parseFloat(e.target.value))}
-          aria-label="Music volume"
-          style={{
-            width: "80px",
-            transform: "rotate(-90deg)",
-            accentColor: "#C9972A",
-            cursor: "pointer",
-          }}
-        />
-      </div>
-
-      <span
+      <input
+        type="range"
+        min={0}
+        max={1}
+        step={0.01}
+        value={muted ? 0 : volume}
+        onChange={(e) => onVolumeChange(parseFloat(e.target.value))}
+        aria-label="Music volume"
         style={{
-          fontSize: "9px",
-          color: "#C9972A",
-          textTransform: "uppercase",
-          letterSpacing: "1px",
-          fontFamily: "sans-serif",
-          userSelect: "none",
+          writingMode: "vertical-lr" as const,
+          direction: "rtl" as const,
+          height: "80px",
+          width: "44px",
+          accentColor: "#C9972A",
+          cursor: "pointer",
         }}
-      >
+      />
+
+      <span aria-hidden="true" style={{
+        fontSize: "9px",
+        color: "#C9972A",
+        textTransform: "uppercase",
+        letterSpacing: "1px",
+        fontFamily: "sans-serif",
+        userSelect: "none",
+      }}>
         Vol
       </span>
     </div>
