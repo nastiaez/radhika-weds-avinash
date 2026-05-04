@@ -205,10 +205,10 @@ html {
 .family-select-root .prompt {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(28, 23, 18, 0.6);
+  color: rgba(28, 23, 18, 0.85);
   margin-bottom: 0rem;
 }
 
@@ -330,21 +330,23 @@ html {
 }
 
 .family-select-root .family-name {
-  font-family: var(--font-display), serif;
-  font-style: italic;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-family: var(--font-body), sans-serif;
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(28, 23, 18, 0.85);
   margin-top: 0;
-  color: #1C1712;
 }
 
 .family-select-root .family-role {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  opacity: 0.6;
+  color: rgba(28, 23, 18, 0.85);
   margin-top: 0rem;
 }
 
@@ -401,10 +403,10 @@ html {
 .family-select-root .card-label {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  opacity: 0.85;
+  color: rgba(28, 23, 18, 0.85);
   line-height: 1.8;
 }
 
@@ -449,20 +451,20 @@ html {
 .family-select-root .card-with {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  opacity: 0.85;
+  color: rgba(28, 23, 18, 0.85);
   margin: 0.5rem 0;
 }
 
 .family-select-root .card-partner-sub {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  opacity: 0.75;
+  color: rgba(28, 23, 18, 0.85);
   line-height: 1.7;
   margin: 0.3rem 0 1.5rem;
 }
@@ -493,16 +495,16 @@ html {
   cursor: pointer;
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(28, 23, 18, 0.65);
+  color: rgba(28, 23, 18, 0.85);
   padding: 0.25rem 0;
   transition: color 200ms ease;
 }
 
 .family-select-root .btn-back:hover {
-  color: rgba(28, 23, 18, 0.9);
+  color: rgba(28, 23, 18, 1);
 }
 
 .family-select-root .card-inner-border {

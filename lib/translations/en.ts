@@ -141,7 +141,7 @@ export const en: Translations = {
     photosGroupLabel: "Phone & Photography",
     q1Title: "Can I take photos?",
     q1Body:
-      "Our admin will cover all cameras at the entrance. Our official photographer will take care of everything.",
+      "Our admin will cover all cameras at the entrance. Our official photographer will be there to capture all the important moments.",
     q2Title: "Will photos be shared?",
     q2Body:
       "We've set up professional photo booths so you can capture beautiful memories with your loved ones.",
