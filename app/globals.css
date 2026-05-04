@@ -401,10 +401,10 @@ html {
 .family-select-root .card-label {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(28, 23, 18, 0.85);
+  color: rgba(28, 23, 18, 0.8);
   line-height: 1.8;
 }
 
@@ -459,10 +459,10 @@ html {
 .family-select-root .card-partner-sub {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(28, 23, 18, 0.85);
+  color: rgba(28, 23, 18, 0.7);
   line-height: 1.7;
   margin: 0.3rem 0 1.5rem;
 }
