@@ -130,6 +130,7 @@ export type Translations = {
     dressGroupLabel: string;
     q3Title: string;
     q3Body: string;
+    q3BodyGuest: string;
     q4Title: string;
     q4Body: string;
     giftsGroupLabel: string;

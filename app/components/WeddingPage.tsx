@@ -414,7 +414,7 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
             <div className="faq-group-label scroll-reveal">{t.faq.dressGroupLabel}</div>
             <div className="faq-item scroll-reveal">
               <h3>{t.faq.q3Title}</h3>
-              <p>{t.faq.q3Body}</p>
+              <p>{isFamily ? t.faq.q3Body : t.faq.q3BodyGuest}</p>
             </div>
             <div className="faq-item scroll-reveal">
               <h3>{t.faq.q4Title}</h3>

@@ -149,6 +149,8 @@ export const en: Translations = {
     q3Title: "What should I wear?",
     q3Body:
       "Traditional Indian attire for both days. Sarees, lehengas, kurtas, sherwanis, dhotis — all welcome. Day 1 leans festive; Day 2 is the full wedding so the more traditional the better.",
+    q3BodyGuest:
+      "Traditional Indian attire. Sarees, lehengas, kurtas, sherwanis, dhotis — all welcome.",
     q4Title: "Do children need to dress up?",
     q4Body:
       "Encouraged, but comfort comes first — especially for little ones in the Chennai July heat.",
