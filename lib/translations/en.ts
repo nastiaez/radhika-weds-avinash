@@ -141,7 +141,7 @@ export const en: Translations = {
     photosGroupLabel: "Phone & Photography",
     q1Title: "Can I take photos?",
     q1Body:
-      "To ensure everyone can be fully present, we have chosen to keep our ceremonies camera-free. Our admin will mask the camera on your phone at the entrance — this applies to everyone without exception. Our official photographer will cover everything, and the full gallery will be shared after the wedding.",
+      "Our admin will cover all cameras at the entrance. Our official photographer will take care of everything.",
     q2Title: "Will photos be shared?",
     q2Body:
       "We've set up professional photo booths so you can capture beautiful memories with your loved ones.",
@@ -155,7 +155,7 @@ export const en: Translations = {
     giftsGroupLabel: "Gifts",
     q5Title: "What should I bring?",
     q5Body:
-      "Your presence and blessings are the gifts we require. Should you wish to honour us with a gift, a cash envelope is welcome. Please do not feel obligated.",
+      "Your presence and blessings are the gifts we require. Should you still wish to honour us with a gift, a cash envelope is welcome. Please do not feel obligated.",
     venueGroupLabel: "Venue & Logistics",
     q6Title: "Where is the venue?",
     q6Body:

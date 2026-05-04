@@ -188,7 +188,7 @@ html {
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(28, 23, 18, 0.6);
+  color: rgba(28, 23, 18, 0.85);
   line-height: 2;
 }
 
@@ -404,7 +404,7 @@ html {
   font-size: 0.62rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.85;
   line-height: 1.8;
 }
 
@@ -452,7 +452,7 @@ html {
   font-size: 0.62rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.85;
   margin: 0.5rem 0;
 }
 
@@ -462,7 +462,7 @@ html {
   font-size: 0.6rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  opacity: 0.55;
+  opacity: 0.75;
   line-height: 1.7;
   margin: 0.3rem 0 1.5rem;
 }
@@ -809,7 +809,7 @@ html {
   align-items: start;
 }
 
-.wedding-page #schedule { background: #F1E9D3; }
+.wedding-page #schedule { background: #F1E9D3; padding-bottom: 10rem; }
 
 .wedding-page .schedule-list {
   display: flex;
@@ -1009,7 +1009,7 @@ html {
   border-bottom: 1px solid #C9972A;
 }
 
-.wedding-page #story { background: #F1E9D3; }
+.wedding-page #story { background: #F1E9D3; padding-bottom: 10rem; }
 
 .wedding-page .story-chapters { max-width: 680px; }
 .wedding-page .story-chapter { margin-bottom: 3.5rem; }
@@ -1115,21 +1115,18 @@ html {
 .wedding-page .story-expand-btn {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #A67C1E;
+  padding: 1rem 2.2rem;
+  color: #7A2535;
   font-family: var(--font-body), sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.1em;
+  font-size: 13px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
-  border-bottom: 1px solid #A67C1E;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  padding-bottom: 2px;
-  background: none;
+  border: 1.5px solid #7A2535;
+  background: transparent;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
 }
 
 .wedding-page .story-expand-btn:hover { opacity: 0.75; }

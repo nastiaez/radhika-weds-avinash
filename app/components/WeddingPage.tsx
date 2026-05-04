@@ -132,8 +132,8 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
         </h1>
         <p className="hero-para" ref={heroParaRef}>
           {t.hero.welcome}<br />
-          {t.hero.tagline1}<br />
-          {t.hero.tagline2}
+          {t.hero.tagline1}
+          {isFamily && <><br />{t.hero.tagline2}</>}
         </p>
         <div className="hero-buttons" ref={heroButtonsRef}>
           {isFamily && <button className="btn btn-fill" onClick={() => setManjalOpen(true)}>{t.hero.ctaManjal}</button>}
