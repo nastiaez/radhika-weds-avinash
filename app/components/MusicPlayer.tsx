@@ -88,7 +88,7 @@ export default function MusicPlayer({ volume, muted, onVolumeChange, onToggleMut
       </button>
 
       {/* Vertical slider: rotate a horizontal range input */}
-      <div style={{ height: "80px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ height: "80px", minWidth: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <input
           type="range"
           min={0}
