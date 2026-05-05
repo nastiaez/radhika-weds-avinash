@@ -322,38 +322,45 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
           {isFamily ? (
             <>
               <p className="story-tagline scroll-reveal">{t.story.tagline}</p>
-              <div className="story-chapters">
-                <div className="story-chapter scroll-reveal">
-                  <p className="story-chapter-label">{t.story.ch1Label}</p>
-                  <h3>{t.story.ch1Title}</h3>
-                  <p className="story-location">{t.story.ch1Location}</p>
-                  <p>{t.story.ch1p1}</p>
-                  <p>{t.story.ch1p2}</p>
+              {storyOpen && (
+                <div className="story-chapters story-chapters-expand">
+                  <div className="story-chapter">
+                    <p className="story-chapter-label">{t.story.ch1Label}</p>
+                    <h3>{t.story.ch1Title}</h3>
+                    <p className="story-location">{t.story.ch1Location}</p>
+                    <p>{t.story.ch1p1}</p>
+                    <p>{t.story.ch1p2}</p>
+                  </div>
+                  <div className="story-chapter">
+                    <p className="story-chapter-label">{t.story.ch2Label}</p>
+                    <h3>{t.story.ch2Title}</h3>
+                    <p className="story-location">{t.story.ch2Location}</p>
+                    <p>{t.story.ch2p1}</p>
+                    <p>{t.story.ch2p2}</p>
+                  </div>
+                  <div className="story-chapter">
+                    <p className="story-chapter-label">{t.story.ch3Label}</p>
+                    <h3>{t.story.ch3Title}</h3>
+                    <p className="story-location">{t.story.ch3Location}</p>
+                    <p>{t.story.ch3p1}</p>
+                    <p className="story-quote">{t.story.ch3Quote}</p>
+                    <p>{t.story.ch3p2}</p>
+                  </div>
+                  <div className="story-chapter">
+                    <p className="story-chapter-label">{t.story.ch4Label}</p>
+                    <h3>{t.story.ch4Title}</h3>
+                    <p>{t.story.ch4p1}</p>
+                    <p>{t.story.ch4p2}</p>
+                    {t.story.ch4p3 && <p>{t.story.ch4p3}</p>}
+                    <p className="story-closing"><em>{t.story.ch4closing}</em></p>
+                  </div>
                 </div>
-                <div className="story-chapter scroll-reveal">
-                  <p className="story-chapter-label">{t.story.ch2Label}</p>
-                  <h3>{t.story.ch2Title}</h3>
-                  <p className="story-location">{t.story.ch2Location}</p>
-                  <p>{t.story.ch2p1}</p>
-                  <p>{t.story.ch2p2}</p>
-                </div>
-                <div className="story-chapter scroll-reveal">
-                  <p className="story-chapter-label">{t.story.ch3Label}</p>
-                  <h3>{t.story.ch3Title}</h3>
-                  <p className="story-location">{t.story.ch3Location}</p>
-                  <p>{t.story.ch3p1}</p>
-                  <p className="story-quote">{t.story.ch3Quote}</p>
-                  <p>{t.story.ch3p2}</p>
-                </div>
-                <div className="story-chapter scroll-reveal">
-                  <p className="story-chapter-label">{t.story.ch4Label}</p>
-                  <h3>{t.story.ch4Title}</h3>
-                  <p>{t.story.ch4p1}</p>
-                  <p>{t.story.ch4p2}</p>
-                  {t.story.ch4p3 && <p>{t.story.ch4p3}</p>}
-                  <p className="story-closing"><em>{t.story.ch4closing}</em></p>
-                </div>
-              </div>
+              )}
+              {!storyOpen && (
+                <button className="story-expand-btn scroll-reveal" onClick={() => setStoryOpen(true)}>
+                  {t.storyGuest.readMore}
+                </button>
+              )}
             </>
           ) : (
             <>
