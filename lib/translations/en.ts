@@ -157,7 +157,7 @@ export const en: Translations = {
     giftsGroupLabel: "Gifts",
     q5Title: "What should I bring?",
     q5Body:
-      "Your presence and blessings are the gifts we require. Should you still wish to honour us with a gift, a cash envelope is welcome. Please do not feel obligated.",
+      "Your presence and blessings are the gifts we require. Please do not feel obligated.",
     venueGroupLabel: "Venue & Logistics",
     q6Title: "Where is the venue?",
     q6Body:
