@@ -365,7 +365,15 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
       )}
 
       {/* FAQ */}
-      <section id="faq">
+      <section
+        id="faq"
+        style={!isFamily ? {
+          backgroundImage: "url('/media/illustration_romance.png')",
+          backgroundSize: "100% auto",
+          backgroundPosition: "center bottom",
+          backgroundRepeat: "no-repeat",
+        } : undefined}
+      >
         <div className="section-inner">
           <h2 className="section-title scroll-reveal">{t.faq.sectionTitle}</h2>
           <div className="faq-list">
