@@ -95,7 +95,7 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
           <img src="/media/logo_transparent.png" alt="R & A" />
         </a>
         <ul className="nav-links">
-          <li><a href="#story">{t.nav.ourStory}</a></li>
+          {isFamily && <li><a href="#story">{t.nav.ourStory}</a></li>}
           <li><a href="#info">{t.nav.info}</a></li>
           <li><a href="#faq">{t.nav.faq}</a></li>
           <li className="nav-lang" ref={langRef}>
@@ -307,101 +307,62 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
         </div>
       </section>
 
-      {/* STORY */}
-      <section
-        id="story"
-        style={{
-          backgroundImage: "url('/media/illustration_romance.png')",
-          backgroundSize: "100% auto",
-          backgroundPosition: "center bottom",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="section-inner">
-          <h2 className="section-title scroll-reveal">{t.story.sectionTitle}</h2>
-          {isFamily ? (
-            <>
-              <p className="story-tagline scroll-reveal">{t.story.tagline}</p>
-              {storyOpen && (
-                <div className="story-chapters story-chapters-expand">
-                  <div className="story-chapter">
-                    <p className="story-chapter-label">{t.story.ch1Label}</p>
-                    <h3>{t.story.ch1Title}</h3>
-                    <p className="story-location">{t.story.ch1Location}</p>
-                    <p>{t.story.ch1p1}</p>
-                    <p>{t.story.ch1p2}</p>
-                  </div>
-                  <div className="story-chapter">
-                    <p className="story-chapter-label">{t.story.ch2Label}</p>
-                    <h3>{t.story.ch2Title}</h3>
-                    <p className="story-location">{t.story.ch2Location}</p>
-                    <p>{t.story.ch2p1}</p>
-                    <p>{t.story.ch2p2}</p>
-                  </div>
-                  <div className="story-chapter">
-                    <p className="story-chapter-label">{t.story.ch3Label}</p>
-                    <h3>{t.story.ch3Title}</h3>
-                    <p className="story-location">{t.story.ch3Location}</p>
-                    <p>{t.story.ch3p1}</p>
-                    <p className="story-quote">{t.story.ch3Quote}</p>
-                    <p>{t.story.ch3p2}</p>
-                  </div>
-                  <div className="story-chapter">
-                    <p className="story-chapter-label">{t.story.ch4Label}</p>
-                    <h3>{t.story.ch4Title}</h3>
-                    <p>{t.story.ch4p1}</p>
-                    <p>{t.story.ch4p2}</p>
-                    {t.story.ch4p3 && <p>{t.story.ch4p3}</p>}
-                    <p className="story-closing"><em>{t.story.ch4closing}</em></p>
-                  </div>
+      {/* STORY — family only */}
+      {isFamily && (
+        <section
+          id="story"
+          style={{
+            backgroundImage: "url('/media/illustration_romance.png')",
+            backgroundSize: "100% auto",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="section-inner">
+            <h2 className="section-title scroll-reveal">{t.story.sectionTitle}</h2>
+            <p className="story-tagline scroll-reveal">{t.story.tagline}</p>
+            {storyOpen && (
+              <div className="story-chapters story-chapters-expand">
+                <div className="story-chapter">
+                  <p className="story-chapter-label">{t.story.ch1Label}</p>
+                  <h3>{t.story.ch1Title}</h3>
+                  <p className="story-location">{t.story.ch1Location}</p>
+                  <p>{t.story.ch1p1}</p>
+                  <p>{t.story.ch1p2}</p>
                 </div>
-              )}
-              {!storyOpen && (
-                <button className="story-expand-btn scroll-reveal" onClick={() => setStoryOpen(true)}>
-                  {t.storyGuest.readMore}
-                </button>
-              )}
-            </>
-          ) : (
-            <>
-              <p className="story-tagline scroll-reveal">{t.storyGuest.tagline}</p>
-              {storyOpen && (
-                <div className="story-chapters story-chapters-expand">
-                  <div className="story-chapter">
-                    <p className="story-chapter-label">{t.storyGuest.ch1Label}</p>
-                    <h3>{t.storyGuest.ch1Title}</h3>
-                    <p className="story-location">{t.storyGuest.ch1Location}</p>
-                    <p>{t.storyGuest.ch1p1}</p>
-                  </div>
-                  <div className="story-chapter">
-                    <p className="story-chapter-label">{t.storyGuest.ch2Label}</p>
-                    <h3>{t.storyGuest.ch2Title}</h3>
-                    <p className="story-location">{t.storyGuest.ch2Location}</p>
-                    <p>{t.storyGuest.ch2p1}</p>
-                  </div>
-                  <div className="story-chapter">
-                    <p className="story-chapter-label">{t.storyGuest.ch3Label}</p>
-                    <h3>{t.storyGuest.ch3Title}</h3>
-                    <p className="story-location">{t.storyGuest.ch3Location}</p>
-                    <p>{t.storyGuest.ch3p1}</p>
-                  </div>
-                  <div className="story-chapter">
-                    <p className="story-chapter-label">{t.storyGuest.ch4Label}</p>
-                    <h3>{t.storyGuest.ch4Title}</h3>
-                    <p>{t.storyGuest.ch4p1}</p>
-                    <p>{t.storyGuest.ch4p2}</p>
-                  </div>
+                <div className="story-chapter">
+                  <p className="story-chapter-label">{t.story.ch2Label}</p>
+                  <h3>{t.story.ch2Title}</h3>
+                  <p className="story-location">{t.story.ch2Location}</p>
+                  <p>{t.story.ch2p1}</p>
+                  <p>{t.story.ch2p2}</p>
                 </div>
-              )}
-              {!storyOpen && (
-                <button className="story-expand-btn scroll-reveal" onClick={() => setStoryOpen(true)}>
-                  {t.storyGuest.readMore}
-                </button>
-              )}
-            </>
-          )}
-        </div>
-      </section>
+                <div className="story-chapter">
+                  <p className="story-chapter-label">{t.story.ch3Label}</p>
+                  <h3>{t.story.ch3Title}</h3>
+                  <p className="story-location">{t.story.ch3Location}</p>
+                  <p>{t.story.ch3p1}</p>
+                  <p className="story-quote">{t.story.ch3Quote}</p>
+                  <p>{t.story.ch3p2}</p>
+                </div>
+                <div className="story-chapter">
+                  <p className="story-chapter-label">{t.story.ch4Label}</p>
+                  <h3>{t.story.ch4Title}</h3>
+                  <p>{t.story.ch4p1}</p>
+                  <p>{t.story.ch4p2}</p>
+                  {t.story.ch4p3 && <p>{t.story.ch4p3}</p>}
+                  <p className="story-closing"><em>{t.story.ch4closing}</em></p>
+                </div>
+              </div>
+            )}
+            {!storyOpen && (
+              <button className="story-expand-btn scroll-reveal" onClick={() => setStoryOpen(true)}>
+                {t.storyGuest.readMore}
+              </button>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* FAQ */}
       <section id="faq">
