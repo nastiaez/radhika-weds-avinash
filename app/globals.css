@@ -1082,6 +1082,14 @@ html {
 .wedding-page #faq .section-label { color: #C9972A; }
 .wedding-page #faq .section-title { color: #F1E9D3; }
 
+.wedding-page #faq.faq-guest {
+  background: #F1E9D3;
+  color: #1C1712;
+}
+.wedding-page #faq.faq-guest .section-title { color: #1C1712; }
+.wedding-page #faq.faq-guest .faq-item h3 { color: #1C1712; }
+.wedding-page #faq.faq-guest .faq-item p { color: rgba(28,23,18,0.8); }
+
 .wedding-page .faq-list { display: flex; flex-direction: column; max-width: 680px; }
 
 .wedding-page .faq-group-label {
