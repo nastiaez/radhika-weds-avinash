@@ -341,7 +341,7 @@ html {
 .family-select-root .family-role {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(28, 23, 18, 0.85);
@@ -393,7 +393,7 @@ html {
 .family-select-root .card-parents {
   font-family: var(--font-display), serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.4;
   margin-bottom: 1.2rem;
 }
@@ -401,7 +401,7 @@ html {
 .family-select-root .card-label {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(28, 23, 18, 0.8);
@@ -440,7 +440,7 @@ html {
 .family-select-root .card-main-name {
   font-family: var(--font-display), serif;
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.2;
   margin: 0.3rem 0;
@@ -449,7 +449,7 @@ html {
 .family-select-root .card-with {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(28, 23, 18, 0.85);
@@ -459,7 +459,7 @@ html {
 .family-select-root .card-partner-sub {
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.62rem;
+  font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(28, 23, 18, 0.7);
@@ -473,7 +473,7 @@ html {
   color: #F2EDD9;
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   text-decoration: none;
@@ -721,7 +721,7 @@ html {
 
 .wedding-page .section-label {
   font-family: var(--font-body), sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -765,13 +765,13 @@ html {
 
 .wedding-page .info-card h3 {
   font-family: var(--font-display), serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 400;
   color: #F1E9D3;
   margin-bottom: 0.75rem;
 }
 
-.wedding-page .info-card p { font-size: 15px; font-weight: 300; color: rgba(245,237,216,0.75); line-height: 1.75; }
+.wedding-page .info-card p { font-size: 16px; font-weight: 300; color: rgba(245,237,216,0.75); line-height: 1.75; }
 .wedding-page .info-card a { color: #C9972A; text-decoration: none; }
 
 .wedding-page .info-divider {
@@ -784,7 +784,7 @@ html {
 
 .wedding-page .info-block-label {
   font-family: var(--font-body), sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -800,7 +800,7 @@ html {
   margin-bottom: 0.75rem;
 }
 
-.wedding-page .info-block p { font-size: 16px; font-weight: 300; line-height: 1.8; color: rgba(245,237,216,0.75); }
+.wedding-page .info-block p { font-size: 17px; font-weight: 300; line-height: 1.8; color: rgba(245,237,216,0.75); }
 
 .wedding-page .info-blocks-grid {
   display: grid;
@@ -837,7 +837,7 @@ html {
 
 .wedding-page .schedule-time {
   font-family: var(--font-body), sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -853,11 +853,11 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.wedding-page .schedule-event p { font-size: 15px; font-weight: 300; color: rgba(26,16,9,0.6); max-width: 520px; line-height: 1.75; }
+.wedding-page .schedule-event p { font-size: 16px; font-weight: 300; color: rgba(26,16,9,0.6); max-width: 520px; line-height: 1.75; }
 
 .wedding-page .schedule-venue-note {
   font-family: var(--font-body), sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #1A1009;
   opacity: 0.6;
@@ -866,7 +866,7 @@ html {
 
 .wedding-page .schedule-day-label {
   font-family: var(--font-body), sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -887,7 +887,7 @@ html {
 
 .wedding-page .schedule-dress {
   font-family: var(--font-body), sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: #1A1009;
   opacity: 0.72;
@@ -997,10 +997,10 @@ html {
   margin-bottom: 0.25rem;
 }
 
-.wedding-page .hotel-card p { font-size: 13px; font-weight: 300; color: rgba(245,237,216,0.65); margin-bottom: 0.75rem; }
+.wedding-page .hotel-card p { font-size: 14px; font-weight: 300; color: rgba(245,237,216,0.65); margin-bottom: 0.75rem; }
 
 .wedding-page .hotel-card a {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1094,7 +1094,7 @@ html {
 
 .wedding-page .faq-group-label {
   font-family: var(--font-body), sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1108,13 +1108,13 @@ html {
 
 .wedding-page .faq-item h3 {
   font-family: var(--font-display), serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 400;
   color: #F1E9D3;
   margin-bottom: 0.75rem;
 }
 
-.wedding-page .faq-item p { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(245,237,216,0.85); }
+.wedding-page .faq-item p { font-size: 16px; font-weight: 300; line-height: 1.8; color: rgba(245,237,216,0.85); }
 
 /* ═══════════════════════════════════
    STORY EXPAND BUTTON
@@ -1255,7 +1255,7 @@ html {
   color: rgba(245,237,216,0.5);
   text-align: center;
   padding: 2.5rem 2rem;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.08em;
 }
 
