@@ -1090,7 +1090,7 @@ html {
   background: #F1E9D3;
   color: #1C1712;
   background-image: url('/media/illustration_romance.png');
-  background-size: 120%;
+  background-size: 100%;
   background-position: center bottom;
   background-repeat: no-repeat;
   padding-bottom: 160px;
@@ -1291,6 +1291,9 @@ html {
     justify-content: flex-start;
     padding: 300px 1.25rem 3rem;
     min-height: auto;
+  }
+  .wedding-page #faq.faq-guest {
+    background-size: 120%;
   }
 }
 
