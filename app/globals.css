@@ -227,6 +227,7 @@ html {
   align-items: center;
   width: 260px;
   position: relative;
+  z-index: 0;
   transition: transform 300ms ease, filter 300ms ease;
 }
 
@@ -267,10 +268,11 @@ html {
 
 .family-select-root .env-front      { z-index: 4; }
 
-/* Hover: wrapper scale + rich warm shadow */
+/* Hover: wrapper scale + rich warm shadow, raised above siblings */
 .family-select-root .envelope-wrapper:hover {
   transform: scale(1.04);
   filter: drop-shadow(0 6px 24px rgba(58, 18, 12, 0.12));
+  z-index: 2;
 }
 
 /* Hover: letter slides up, flap appears */
@@ -290,6 +292,7 @@ html {
   filter: drop-shadow(0 6px 24px rgba(58, 18, 12, 0.12));
   transition: opacity 200ms ease;
   pointer-events: none;
+  z-index: 2;
 }
 
 .family-select-root .envelope-wrapper.clicking .env-letter-rect {
@@ -306,6 +309,7 @@ html {
 .family-select-root .envelope-wrapper.peeking {
   transform: scale(1.04);
   filter: drop-shadow(0 6px 24px rgba(58, 18, 12, 0.12));
+  z-index: 2;
 }
 
 .family-select-root .envelope-wrapper.peeking .env-letter-rect {
