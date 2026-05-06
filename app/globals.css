@@ -1089,6 +1089,7 @@ html {
 .wedding-page #faq.faq-guest {
   background: #F1E9D3;
   color: #1C1712;
+  padding-bottom: 12rem;
 }
 .wedding-page #faq.faq-guest .section-title { color: #1C1712; }
 .wedding-page #faq.faq-guest .faq-item h3 { color: #1C1712; }
