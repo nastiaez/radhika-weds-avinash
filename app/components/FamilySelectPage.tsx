@@ -87,7 +87,7 @@ export default function FamilySelectPage({ lang, type, onReady }: Props) {
           <p className="prompt">Please select whose guest are you:</p>
 
           <div className="envelopes">
-            {(["ranganathan", "karandikar"] as const).map((family) => (
+            {(["karandikar", "ranganathan"] as const).map((family) => (
               <div
                 key={family}
                 className={`envelope-wrapper${clicking === family ? " clicking" : ""}${peeking === family ? " peeking" : ""}`}

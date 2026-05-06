@@ -43,7 +43,7 @@ export default function MusicProvider({ children }: { children: React.ReactNode 
   return (
     <MusicContext.Provider value={{ startMusic }}>
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-      <audio ref={audioRef} src="/media/music.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="/media/music.mp4" loop preload="auto" />
       {children}
       {started && (
         <MusicPlayer
