@@ -7,9 +7,9 @@ export default function MusicProvider({ children }: { children: React.ReactNode 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [started, setStarted] = useState(false);
-  const [volume, setVolume] = useState(0.7);
+  const [volume, setVolume] = useState(0.49);
   const [muted, setMuted] = useState(false);
-  const lastVolumeRef = useRef(0.7);
+  const lastVolumeRef = useRef(0.49);
 
   useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
 
@@ -32,7 +32,7 @@ export default function MusicProvider({ children }: { children: React.ReactNode 
 
   const toggleMute = useCallback(() => {
     if (muted || volume <= 0.01) {
-      const restore = lastVolumeRef.current > 0 ? lastVolumeRef.current : 0.7;
+      const restore = lastVolumeRef.current > 0 ? lastVolumeRef.current : 0.49;
       handleVolumeChange(restore);
     } else {
       lastVolumeRef.current = volume;
