@@ -66,13 +66,17 @@ export type Translations = {
     mapsLink: string;
     stayTitle: string;
     stayIntro: string;
-    hotel1Name: string;
-    hotel1Desc: string;
-    hotel2Name: string;
-    hotel2Desc: string;
-    hotel3Name: string;
-    hotel3Desc: string;
-    seeMore: string;
+    hotels: Array<{
+      name: string;
+      distance: string;
+      address: string;
+      price: string;
+      priceNote: string;
+      availability: string;
+      bookingUrl: string;
+      photos: string[];
+    }>;
+    reserveRoom: string;
   };
   story: {
     sectionTitle: string;
