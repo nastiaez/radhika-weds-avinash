@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { translations } from "@/lib/translations";
+import HotelCard from "./HotelCard";
 
 type Lang = "en" | "ta" | "mr";
 type GuestType = "1" | "2";
@@ -284,24 +285,13 @@ export default function WeddingPage({ lang, type, onLangChange }: Props) {
             <h3 className="scroll-reveal">{t.venue.stayTitle}</h3>
             <p className="stay-intro scroll-reveal">{t.venue.stayIntro}</p>
             <div className="hotel-grid">
-              <div className="hotel-card scroll-reveal" style={{ transitionDelay: "0ms" }}>
-                <div className="hotel-img">Hotel photo</div>
-                <h4>{t.venue.hotel1Name}</h4>
-                <p>{t.venue.hotel1Desc}</p>
-                <a href="#" target="_blank" rel="noreferrer">{t.venue.seeMore}</a>
-              </div>
-              <div className="hotel-card scroll-reveal" style={{ transitionDelay: "100ms" }}>
-                <div className="hotel-img">Hotel photo</div>
-                <h4>{t.venue.hotel2Name}</h4>
-                <p>{t.venue.hotel2Desc}</p>
-                <a href="#" target="_blank" rel="noreferrer">{t.venue.seeMore}</a>
-              </div>
-              <div className="hotel-card scroll-reveal" style={{ transitionDelay: "200ms" }}>
-                <div className="hotel-img">Hotel photo</div>
-                <h4>{t.venue.hotel3Name}</h4>
-                <p>{t.venue.hotel3Desc}</p>
-                <a href="#" target="_blank" rel="noreferrer">{t.venue.seeMore}</a>
-              </div>
+              {t.venue.hotels.map((hotel) => (
+                <HotelCard
+                  key={hotel.name}
+                  hotel={hotel}
+                  reserveRoom={t.venue.reserveRoom}
+                />
+              ))}
             </div>
           </div>
         </div>
