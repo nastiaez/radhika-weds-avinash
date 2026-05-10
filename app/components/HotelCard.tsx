@@ -84,7 +84,6 @@ export default function HotelCard({ hotel, reserveRoom }: HotelCardProps) {
         <div className="hotel-details-left">
           <h4>{hotel.name}</h4>
           <p className="hotel-meta">↳ {hotel.distance}</p>
-          <p className="hotel-meta">↳ {hotel.address}</p>
           <p className="hotel-meta">↳ {hotel.availability}</p>
         </div>
         <div className="hotel-details-right">

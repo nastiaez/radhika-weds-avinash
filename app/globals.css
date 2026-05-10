@@ -1072,7 +1072,7 @@ html {
   overflow: hidden;
 }
 .wedding-page .hotel-photo-slot--dim img {
-  opacity: 0.45;
+  opacity: 1;
 }
 
 /* ── Mobile carousel ── */
