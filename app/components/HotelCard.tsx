@@ -27,7 +27,6 @@ export default function HotelCard({ hotel, reserveRoom }: HotelCardProps) {
   const next = () => setOffset((o) => (o + 1) % n);
 
   const desktopPhotos = [0, 1, 2].map((i) => hotel.photos[(offset + i) % n]);
-  const mobilePhoto = hotel.photos[offset % n];
 
   return (
     <div className="hotel-card scroll-reveal">
@@ -36,7 +35,7 @@ export default function HotelCard({ hotel, reserveRoom }: HotelCardProps) {
         <button className="hotel-arrow hotel-arrow-left" onClick={prev} aria-label="Previous photo">&#8249;</button>
         <div className="hotel-photos-strip">
           {desktopPhotos.map((photo, i) => (
-            <div key={`${photo}-${i}`} className={`hotel-photo-slot${i === 2 ? " hotel-photo-slot--dim" : ""}`}>
+            <div key={`${photo}-${i}`} className="hotel-photo-slot">
               <Image
                 src={`/media/${photo}`}
                 alt={`${hotel.name} photo ${(offset + i) % n + 1}`}
@@ -50,16 +49,25 @@ export default function HotelCard({ hotel, reserveRoom }: HotelCardProps) {
         <button className="hotel-arrow hotel-arrow-right" onClick={next} aria-label="Next photo">&#8250;</button>
       </div>
 
-      {/* Mobile: single photo with arrows + dots */}
+      {/* Mobile: all photos stacked, show active via CSS — instant switch, no reload */}
       <div className="hotel-carousel-mobile">
         <div className="hotel-photo-single">
-          <Image
-            src={`/media/${mobilePhoto}`}
-            alt={`${hotel.name} photo ${offset + 1}`}
-            fill
-            style={{ objectFit: "cover" }}
-            sizes="100vw"
-          />
+          {hotel.photos.map((photo, i) => (
+            <div
+              key={photo}
+              className="hotel-photo-layer"
+              style={{ opacity: i === offset % n ? 1 : 0 }}
+            >
+              <Image
+                src={`/media/${photo}`}
+                alt={`${hotel.name} photo ${i + 1}`}
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="100vw"
+                priority={i === 0}
+              />
+            </div>
+          ))}
           <div className="hotel-mobile-arrows">
             <button className="hotel-arrow hotel-arrow-left" onClick={prev} aria-label="Previous photo">&#8249;</button>
             <button className="hotel-arrow hotel-arrow-right" onClick={next} aria-label="Next photo">&#8250;</button>

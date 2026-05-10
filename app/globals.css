@@ -1081,6 +1081,11 @@ html {
   aspect-ratio: 1 / 1;
   overflow: hidden;
 }
+.wedding-page .hotel-photo-layer {
+  position: absolute;
+  inset: 0;
+  transition: none;
+}
 .wedding-page .hotel-mobile-arrows {
   position: absolute;
   top: 50%;
@@ -1088,9 +1093,10 @@ html {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 8px;
+  padding: 0 12px;
   box-sizing: border-box;
   pointer-events: none;
+  z-index: 3;
 }
 .wedding-page .hotel-mobile-overlay {
   position: absolute;
@@ -1125,8 +1131,8 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: 1px solid rgba(201,151,42,0.3);
+  background: rgba(0,0,0,0.65);
+  border: 1px solid rgba(201,151,42,0.5);
   color: #F1E9D3;
   font-size: 20px;
   width: 36px;
@@ -1140,6 +1146,17 @@ html {
 }
 .wedding-page .hotel-arrow-left { left: 10px; }
 .wedding-page .hotel-arrow-right { right: 10px; }
+
+/* Mobile: larger arrows */
+.wedding-page .hotel-carousel-mobile .hotel-arrow {
+  position: static;
+  transform: none;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+  background: rgba(0,0,0,0.72);
+  border: 1px solid rgba(201,151,42,0.6);
+}
 
 /* ── Details ── */
 .wedding-page .hotel-details {
