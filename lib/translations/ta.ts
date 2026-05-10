@@ -79,11 +79,11 @@ export const ta: Translations = {
     hotels: [
       {
         name: "Keys Prima by Lemon Tree Hotels",
-        distance: "10 min by car from Dwaraka Palace",
+        distance: "துவாரகா பேலஸிலிருந்து காரில் 10 நிமிடம்",
         address: "Thiruvanmiyur, Chennai",
         price: "₹6,500 / night",
-        priceNote: "Double room · incl. breakfast + tax",
-        availability: "Available 30 Jun – 2 Jul only",
+        priceNote: "டபுள் அறை · காலை உணவு + வரி உட்பட",
+        availability: "ஜூன் 30 – ஜூலை 2 வரை மட்டும் கிடைக்கும்",
         bookingUrl: "https://www.lemontreehotels.com/keys-prima-hotel/chennai/hotel-katti-ma-chennai",
         photos: ["hotel1.2.jpg", "hotel1.1.jpg", "hotel1.3.png", "hotel1.4.png"],
       },
