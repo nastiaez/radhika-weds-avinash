@@ -83,7 +83,7 @@ export const en: Translations = {
         priceNote: "Double room · incl. breakfast + tax",
         availability: "Available 30 Jun – 2 Jul only",
         bookingUrl: "https://www.lemontreehotels.com/keys-prima-hotel/chennai/hotel-katti-ma-chennai",
-        photos: ["hotel1.2.jpg", "hotel1.1.jpg", "hotel1.3.png"],
+        photos: ["hotel1.2.jpg", "hotel1.1.jpg", "hotel1.3.png", "hotel1.4.png"],
       },
     ],
     reserveRoom: "Reserve a room →",
